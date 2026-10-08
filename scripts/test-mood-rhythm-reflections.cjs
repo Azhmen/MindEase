@@ -1,0 +1,35 @@
+const assert=require('node:assert/strict'),fs=require('fs'),vm=require('vm'),ts=require('typescript'),React=require('react');
+let state=[],index=0,calls=[];
+const props={moodEntryId:'entry-a',disabled:false,onChanged:()=>calls.push(['changed'])};
+const widget=p=>React.createElement('Widget',p,p.children);
+const exportsObject={};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/components/mood-reflection-panel.tsx','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText,{exports:exportsObject,require:id=>{
+ if(id==='react')return {...React,useState:initial=>{const key=index++;if(!(key in state))state[key]=initial;return [state[key],value=>{state[key]=typeof value==='function'?value(state[key]):value;}];}};
+ if(id==='react-native')return {View:widget,Modal:widget,KeyboardAvoidingView:widget,ScrollView:widget,Pressable:widget,StyleSheet:{create:v=>v},Platform:{OS:'web'}};
+ if(id==='@/components/gihani-ui')return {useGihaniAction:()=>({busy:false,error:'',notice:'',run:async fn=>fn()})};
+ if(id==='@/services/mood-reflections')return Object.fromEntries(['createMoodReflection','updateMoodReflection','deleteMoodReflection'].map(name=>[name,async(...args)=>calls.push([name,...args])]));
+ if(id==='@/components/student-ui')return {CareButton:widget,studentStyles:{}};
+ if(id==='@/components/text')return {AppText:widget};
+ if(id==='@/components/app-text-input')return {AppTextInput:widget};
+ if(id==='@/components/care-icon')return {CareIcon:widget};
+ if(id==='@/components/student-screen')return {StatusMessage:widget};
+ if(id==='@/constants/colors')return {Colors:{}};
+ return require(id);
+}});
+const nodes=tree=>Array.isArray(tree)?tree.flatMap(nodes):tree&&typeof tree==='object'?[tree,...nodes(tree.props?.children)]:[];
+const render=()=>{index=0;return exportsObject.MoodReflectionPanel(props);};
+const find=(key,value)=>nodes(render()).find(n=>n.props?.[key]===value);
+(async()=>{
+ assert.equal(find('visible',false).props.visible,false);
+ find('accessibilityLabel','Add reflection').props.onPress();assert.equal(find('visible',true).props.visible,true);
+ find('label','Reflection').props.onChangeText('A helpful pause');await find('title','Save Reflection').props.onPress();
+ assert.deepEqual(calls,[['createMoodReflection','entry-a','A helpful pause'],['changed']]);
+ assert.equal(find('visible',false).props.visible,false);
+ props.reflection={reflection:'Earlier reflection'};calls=[];
+ find('accessibilityLabel','Edit reflection').props.onPress();find('label','Reflection').props.onChangeText('Updated reflection');await find('title','Save Reflection').props.onPress();
+ assert.deepEqual(calls,[['updateMoodReflection','entry-a','Updated reflection'],['changed']]);calls=[];
+ find('accessibilityLabel','Delete reflection').props.onPress();await find('title','Confirm Delete Reflection').props.onPress();
+ assert.deepEqual(calls,[['deleteMoodReflection','entry-a'],['changed']]);
+ const route=fs.readFileSync('src/app/student/mood/history.tsx','utf8');assert.ok(!route.includes('deleteMoodEntry')&&!route.includes('updateMoodEntry'));
+ console.log('PASS: compact preview opens modal; actual create/edit/delete reflection handlers use mood_reflections only; history has no mood mutations.');
+})().catch(e=>{console.error(e);process.exitCode=1;});

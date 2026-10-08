@@ -1,0 +1,390 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function student() {
+      return signedIn() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'student';
+    }
+    function profileText(data, field, limit) {
+      return !(field in data) || (data[field] is string && data[field].size() <= limit);
+    }
+    function publicCounselorProfile(data) {
+      return data.name is string && data.name.size() > 0 && data.name.size() <= 100
+        && data.name.matches('[\\s\\S]*[^\\s][\\s\\S]*')
+        && profileText(data, 'title', 100) && profileText(data, 'specialization', 160);
+    }
+    function synchronizedCounselorProfile(uid, privateData) {
+      let directory = getAfter(/databases/$(database)/documents/counselor_directory/$(uid)).data;
+      return directory.name == privateData.name
+        && directory.get('title', '') == privateData.get('title', '')
+        && directory.get('specialization', '') == privateData.get('specialization', '');
+    }
+    // Preserve registration and own-profile reads. Role changes are not allowed.
+    match /users/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.keys().hasAll(['uid', 'name', 'email', 'role', 'createdAt'])
+        && request.resource.data.keys().hasOnly(['uid', 'name', 'email', 'role', 'createdAt', 'appointmentRemindersEnabled'])
+        && request.resource.data.uid == uid
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 100
+        && request.resource.data.name.matches('[\\s\\S]*[^\\s][\\s\\S]*')
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.role in ['student', 'counselor']
+        && request.resource.data.get('appointmentRemindersEnabled', false) == false
+        && request.resource.data.createdAt == request.time;
+      // Counselor editing cannot change registration identity or account ownership.
+      // Student profile/settings edits preserve registration identity and ownership.
+      allow update: if signedIn() && request.auth.uid == uid && resource.data.role == 'student'
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'preferredName', 'faculty', 'yearOfStudy', 'appointmentRemindersEnabled', 'updatedAt'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 100
+        && request.resource.data.name.matches('[\\s\\S]*[^\\s][\\s\\S]*')
+        && profileText(request.resource.data, 'preferredName', 100)
+        && profileText(request.resource.data, 'faculty', 120)
+        && profileText(request.resource.data, 'yearOfStudy', 1)
+        && request.resource.data.get('yearOfStudy', '') in ['', '1', '2', '3', '4', '5', '6', '7', '8']
+        && request.resource.data.get('appointmentRemindersEnabled', false) is bool
+        && (!('appointmentRemindersEnabled' in resource.data) || 'appointmentRemindersEnabled' in request.resource.data)
+        && request.resource.data.updatedAt == request.time;
+      allow update: if signedIn() && request.auth.uid == uid && resource.data.role == 'counselor'
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'title', 'specialization', 'bio', 'officeLocation', 'phoneExtension', 'updatedAt'])
+        && publicCounselorProfile(request.resource.data)
+        && profileText(request.resource.data, 'bio', 1000)
+        && profileText(request.resource.data, 'officeLocation', 200)
+        && profileText(request.resource.data, 'phoneExtension', 30)
+        && request.resource.data.updatedAt == request.time
+        && exists(/databases/$(database)/documents/counselor_directory/$(uid))
+        && synchronizedCounselorProfile(uid, request.resource.data);
+    }
+    function validMood(data) {
+      return data.keys().hasOnly(['userId', 'mood', 'moodScore', 'note', 'createdAt', 'updatedAt'])
+        && data.userId == request.auth.uid
+        && data.note is string && data.note.size() <= 500
+        && ((data.mood == 'Great' && data.moodScore == 5)
+          || (data.mood == 'Good' && data.moodScore == 4)
+          || (data.mood == 'Okay' && data.moodScore == 3)
+          || (data.mood == 'Low' && data.moodScore == 2)
+          || (data.mood == 'Very Low' && data.moodScore == 1));
+    }
+    match /mood_entries/{id} {
+      allow read, delete: if student() && resource.data.userId == request.auth.uid;
+      allow create: if student() && validMood(request.resource.data)
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.updatedAt == request.time;
+      allow update: if student() && resource.data.userId == request.auth.uid
+        && validMood(request.resource.data)
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.updatedAt == request.time;
+    }
+
+    // Directory contains display details only; console/Admin SDK manages membership.
+    match /counselor_directory/{counselorUid} {
+      allow read: if signedIn();
+      // Membership, active, and any existing public admin fields are preserved.
+      allow update: if counselorProfile() && request.auth.uid == counselorUid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'title', 'specialization'])
+        && publicCounselorProfile(request.resource.data)
+        && getAfter(/databases/$(database)/documents/users/$(counselorUid)).data.updatedAt == request.time
+        && synchronizedCounselorProfile(counselorUid, getAfter(/databases/$(database)/documents/users/$(counselorUid)).data);
+    }
+    function counselor() {
+      return signedIn()
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'counselor'
+        && exists(/databases/$(database)/documents/counselor_directory/$(request.auth.uid));
+    }
+    function participant(thread) {
+      return (student() && thread.studentId == request.auth.uid)
+        || (counselor() && thread.counselorId == request.auth.uid);
+    }
+    function validText(text) {
+      return text is string && text.size() > 0 && text.size() <= 2000
+        && text.matches('[\\s\\S]*[^\\s][\\s\\S]*');
+    }
+    match /chat_threads/{threadId} {
+      // Missing own-thread reads allow initial get/create and student subscription.
+      allow get: if (student() && threadId == request.auth.uid
+          && (!exists(/databases/$(database)/documents/chat_threads/$(threadId))
+            || resource.data.studentId == request.auth.uid))
+        || (counselor() && resource.data.counselorId == request.auth.uid);
+      allow list: if participant(resource.data);
+      allow create: if student() && threadId == request.auth.uid
+        && request.resource.data.keys().hasOnly(['studentId', 'counselorId', 'createdAt', 'lastMessage', 'lastMessageAt'])
+        && request.resource.data.studentId == request.auth.uid
+        && request.resource.data.counselorId is string
+        && exists(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId))
+        && (!('active' in get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data)
+          || get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data.active == true)
+        && get(/databases/$(database)/documents/users/$(request.resource.data.counselorId)).data.role == 'counselor'
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.lastMessage == '' && request.resource.data.lastMessageAt == null;
+      allow update: if participant(resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastMessage', 'lastMessageAt'])
+        && validText(request.resource.data.lastMessage)
+        && (request.resource.data.lastMessageAt == request.time
+          || request.resource.data.lastMessageAt == resource.data.lastMessageAt);
+      // No client thread deletion or changes to student/counselor assignment.
+      match /messages/{messageId} {
+        function thread() { return get(/databases/$(database)/documents/chat_threads/$(threadId)).data; }
+        allow read: if participant(thread());
+        allow create: if participant(thread())
+          && request.resource.data.keys().hasOnly(['senderId', 'senderRole', 'text', 'createdAt'])
+          && request.resource.data.senderId == request.auth.uid
+          && ((student() && request.resource.data.senderRole == 'student')
+            || (counselor() && request.resource.data.senderRole == 'counselor'))
+          && validText(request.resource.data.text)
+          && request.resource.data.createdAt == request.time
+          && getAfter(/databases/$(database)/documents/chat_threads/$(threadId)).data.lastMessage == request.resource.data.text
+          && getAfter(/databases/$(database)/documents/chat_threads/$(threadId)).data.lastMessageAt == request.time;
+        allow update: if participant(thread())
+          && resource.data.senderId == request.auth.uid
+          && request.resource.data.senderId == resource.data.senderId
+          && request.resource.data.senderRole == resource.data.senderRole
+          && request.resource.data.createdAt == resource.data.createdAt
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['text', 'edited', 'updatedAt'])
+          && validText(request.resource.data.text)
+          && request.resource.data.edited == true
+          && request.resource.data.updatedAt == request.time;
+        allow delete: if participant(thread())
+          && resource.data.senderId == request.auth.uid;
+      }
+    }
+    // Guest access is bound to Firebase Anonymous Auth, never to a local ID alone.
+    function anonymous() {
+      return signedIn() && request.auth.token.firebase.sign_in_provider == 'anonymous';
+    }
+    function validAnonymousMood(data) {
+      return data.keys().hasOnly(['anonymousUid', 'sessionId', 'mood', 'moodScore', 'note', 'createdAt', 'updatedAt'])
+        && data.anonymousUid == request.auth.uid
+        && data.sessionId is string && data.sessionId.size() == 36
+        && data.note is string && data.note.size() <= 500
+        && ((data.mood == 'Great' && data.moodScore == 5)
+          || (data.mood == 'Good' && data.moodScore == 4)
+          || (data.mood == 'Okay' && data.moodScore == 3)
+          || (data.mood == 'Low' && data.moodScore == 2)
+          || (data.mood == 'Very Low' && data.moodScore == 1));
+    }
+    match /anonymous_mood_entries/{entryId} {
+      allow read, delete: if anonymous() && resource.data.anonymousUid == request.auth.uid;
+      allow create: if anonymous() && validAnonymousMood(request.resource.data)
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.updatedAt == request.time;
+      allow update: if anonymous() && resource.data.anonymousUid == request.auth.uid
+        && validAnonymousMood(request.resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['mood', 'moodScore', 'note', 'updatedAt'])
+        && request.resource.data.updatedAt == request.time;
+    }
+    function anonymousParticipant(thread) {
+      return (anonymous() && thread.anonymousUid == request.auth.uid)
+        || (counselor() && thread.counselorId == request.auth.uid);
+    }
+    function activeCounselor(uid) {
+      return uid is string
+        && exists(/databases/$(database)/documents/counselor_directory/$(uid))
+        && (!('active' in get(/databases/$(database)/documents/counselor_directory/$(uid)).data)
+          || get(/databases/$(database)/documents/counselor_directory/$(uid)).data.active == true)
+        && get(/databases/$(database)/documents/users/$(uid)).data.role == 'counselor';
+    }
+    match /anonymous_chat_threads/{sessionId} {
+      // Missing reads expose no data and allow the random-ID get/create flow.
+      allow get: if (anonymous() && !exists(/databases/$(database)/documents/anonymous_chat_threads/$(sessionId)))
+        || anonymousParticipant(resource.data);
+      allow list: if anonymousParticipant(resource.data);
+      allow create: if anonymous()
+        && request.resource.data.keys().hasOnly(['sessionId', 'anonymousUid', 'counselorId', 'createdAt', 'lastMessage', 'lastMessageAt'])
+        && request.resource.data.sessionId == sessionId && sessionId.size() == 36
+        && request.resource.data.anonymousUid == request.auth.uid
+        && activeCounselor(request.resource.data.counselorId)
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.lastMessage == '' && request.resource.data.lastMessageAt == null;
+      allow update: if anonymousParticipant(resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastMessage', 'lastMessageAt'])
+        && validText(request.resource.data.lastMessage)
+        && (request.resource.data.lastMessageAt == request.time
+          || request.resource.data.lastMessageAt == resource.data.lastMessageAt);
+      // No reassignment or client thread deletion.
+      match /messages/{messageId} {
+        function thread() { return get(/databases/$(database)/documents/anonymous_chat_threads/$(sessionId)).data; }
+        function ownsMessage(message) {
+          return (anonymous() && thread().anonymousUid == request.auth.uid && message.senderType == 'anonymous')
+            || (counselor() && thread().counselorId == request.auth.uid && message.senderType == 'counselor');
+        }
+        allow read: if anonymousParticipant(thread());
+        allow create: if anonymousParticipant(thread()) && ownsMessage(request.resource.data)
+          && request.resource.data.keys().hasOnly(['anonymousUid', 'senderType', 'text', 'createdAt', 'edited', 'updatedAt'])
+          && request.resource.data.anonymousUid == thread().anonymousUid
+          && request.resource.data.senderType in ['anonymous', 'counselor']
+          && validText(request.resource.data.text)
+          && request.resource.data.createdAt == request.time
+          && request.resource.data.updatedAt == request.time && request.resource.data.edited == false
+          && getAfter(/databases/$(database)/documents/anonymous_chat_threads/$(sessionId)).data.lastMessage == request.resource.data.text
+          && getAfter(/databases/$(database)/documents/anonymous_chat_threads/$(sessionId)).data.lastMessageAt == request.time;
+        allow update: if anonymousParticipant(thread()) && ownsMessage(resource.data)
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['text', 'edited', 'updatedAt'])
+          && validText(request.resource.data.text)
+          && request.resource.data.edited == true && request.resource.data.updatedAt == request.time;
+        allow delete: if anonymousParticipant(thread()) && ownsMessage(resource.data);
+      }
+    }
+
+    // Kiyathan: counselor role does not require chat-directory membership.
+    function counselorProfile() {
+      return signedIn() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'counselor';
+    }
+    function validAvailability(data) {
+      return data.keys().hasAll(['counselorId', 'date', 'startTime', 'endTime', 'mode', 'location', 'isAvailable', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['counselorId', 'date', 'startTime', 'endTime', 'mode', 'location', 'isAvailable', 'createdAt', 'updatedAt'])
+        && data.counselorId == request.auth.uid
+        && data.date is string && data.date.matches('[0-9]{4}-[0-9]{2}-[0-9]{2}')
+        && data.startTime is string && data.startTime.matches('([01][0-9]|2[0-3]):[0-5][0-9]')
+        && data.endTime is string && data.endTime.matches('([01][0-9]|2[0-3]):[0-5][0-9]')
+        && data.endTime > data.startTime && data.mode in ['virtual', 'in_person']
+        && data.location is string && data.location.size() <= 200
+        && (data.mode == 'virtual' || data.location.size() > 0)
+        && data.isAvailable is bool;
+    }
+    match /counselor_availability/{slotId} {
+      allow read: if (counselorProfile() && resource.data.counselorId == request.auth.uid)
+        || (student() && resource.data.isAvailable == true);
+      allow create: if counselorProfile() && validAvailability(request.resource.data)
+        && request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time;
+      allow update: if counselorProfile() && resource.data.counselorId == request.auth.uid
+        && validAvailability(request.resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['date', 'startTime', 'endTime', 'mode', 'location', 'isAvailable', 'updatedAt'])
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if counselorProfile() && resource.data.counselorId == request.auth.uid;
+    }
+    function assignedSession(id) {
+      return counselorProfile() && get(/databases/$(database)/documents/appointments/$(id)).data.counselorId == request.auth.uid;
+    }
+    // Tharukanan: student-owned booking CRUD. Cancellation is a soft delete.
+    function validAppointment(data) {
+      return data.keys().hasAll(['studentId', 'counselorId', 'counselorName', 'appointmentDate', 'appointmentTime', 'sessionFormat', 'status', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['studentId', 'counselorId', 'counselorName', 'appointmentDate', 'appointmentTime', 'sessionFormat', 'status', 'createdAt', 'updatedAt'])
+        && data.studentId == request.auth.uid
+        && data.counselorId is string
+        && data.counselorName is string && data.counselorName.size() > 0
+        && data.appointmentDate is string && data.appointmentDate.matches('[0-9]{4}-[0-9]{2}-[0-9]{2}')
+        && data.appointmentTime is string && data.appointmentTime.matches('([01][0-9]|2[0-3]):[0-5][0-9]')
+        && data.sessionFormat in ['Virtual', 'In-Person']
+        && data.status in ['booked', 'rescheduled', 'cancelled', 'completed'];
+    }
+    match /appointments/{appointmentId} {
+      // An idempotent create transaction may read an absent document; no data is exposed.
+      allow get: if student() && (!exists(/databases/$(database)/documents/appointments/$(appointmentId))
+        || resource.data.studentId == request.auth.uid);
+      allow list: if student() && resource.data.studentId == request.auth.uid;
+      allow create: if student() && validAppointment(request.resource.data)
+        && activeCounselor(request.resource.data.counselorId)
+        && request.resource.data.counselorName == get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data.name
+        && request.resource.data.status == 'booked'
+        && request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time;
+      allow update: if student() && resource.data.studentId == request.auth.uid
+        && validAppointment(request.resource.data)
+        && resource.data.status in ['booked', 'rescheduled']
+        && request.resource.data.updatedAt == request.time
+        && ((request.resource.data.status == 'rescheduled'
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['appointmentDate', 'appointmentTime', 'sessionFormat', 'status', 'updatedAt']))
+          || (request.resource.data.status == 'cancelled'
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'updatedAt'])));
+      // Kiyathan can read assigned sessions and change terminal status only.
+      allow read: if counselorProfile() && resource.data.counselorId == request.auth.uid;
+      allow update: if counselorProfile() && resource.data.counselorId == request.auth.uid
+        && resource.data.status in ['booked', 'rescheduled']
+        && request.resource.data.status in ['completed', 'cancelled']
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'updatedAt'])
+        && request.resource.data.updatedAt == request.time;
+      // No hard delete or student completion/session-management permissions.
+    }
+    function ownsAppointment(appointmentId) {
+      return student()
+        && get(/databases/$(database)/documents/appointments/$(appointmentId)).data.studentId == request.auth.uid;
+    }
+    function validPreSessionNote(data, noteId) {
+      return data.keys().hasAll(['studentId', 'appointmentId', 'note', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['studentId', 'appointmentId', 'note', 'createdAt', 'updatedAt'])
+        && data.studentId == request.auth.uid && data.appointmentId == noteId
+        && data.note is string && data.note.size() > 0 && data.note.size() <= 2000
+        && data.note.matches('[\\s\\S]*[^\\s][\\s\\S]*');
+    }
+    match /pre_session_notes/{noteId} {
+      // Assigned counselors get a single note (or absence), never student note writes.
+      allow get: if assignedSession(noteId)
+        && (!exists(/databases/$(database)/documents/pre_session_notes/$(noteId))
+          || (resource.data.appointmentId == noteId
+            && resource.data.studentId == get(/databases/$(database)/documents/appointments/$(noteId)).data.studentId));
+
+      allow get: if ownsAppointment(noteId) && (!exists(/databases/$(database)/documents/pre_session_notes/$(noteId))
+        || resource.data.studentId == request.auth.uid);
+      allow list: if student() && resource.data.studentId == request.auth.uid;
+      allow create: if student() && validPreSessionNote(request.resource.data, noteId)
+        && getAfter(/databases/$(database)/documents/appointments/$(noteId)).data.studentId == request.auth.uid
+        && request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time;
+      allow update: if ownsAppointment(noteId) && resource.data.studentId == request.auth.uid
+        && validPreSessionNote(request.resource.data, noteId)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['note', 'updatedAt'])
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if ownsAppointment(noteId) && resource.data.studentId == request.auth.uid;
+    }
+
+    // Gihani: separate reflections; mood_entries grants remain Azhmen's unchanged rules.
+    function ownsMoodEntry(id) {
+      return student() && get(/databases/$(database)/documents/mood_entries/$(id)).data.userId == request.auth.uid;
+    }
+    function validReflection(data, id) {
+      return data.keys().hasAll(['userId', 'moodEntryId', 'reflection', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['userId', 'moodEntryId', 'reflection', 'createdAt', 'updatedAt'])
+        && data.userId == request.auth.uid && data.moodEntryId == id
+        && data.reflection is string && data.reflection.size() > 0 && data.reflection.size() <= 1000
+        && data.reflection.matches('[\\s\\S]*[^\\s][\\s\\S]*');
+    }
+    match /mood_reflections/{reflectionId} {
+      allow get: if student() && ((exists(/databases/$(database)/documents/mood_reflections/$(reflectionId))
+          && resource.data.userId == request.auth.uid)
+        || (!exists(/databases/$(database)/documents/mood_reflections/$(reflectionId)) && ownsMoodEntry(reflectionId)));
+      allow list: if student() && resource.data.userId == request.auth.uid;
+      allow create: if student() && validReflection(request.resource.data, reflectionId)
+        && ownsMoodEntry(reflectionId)
+        && request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time;
+      allow update: if student() && resource.data.userId == request.auth.uid
+        && validReflection(request.resource.data, reflectionId) && ownsMoodEntry(reflectionId)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['reflection', 'updatedAt'])
+        && request.resource.data.updatedAt == request.time;
+      // Own orphan reflections may still be removed after the original is deleted by Azhmen.
+      allow delete: if student() && resource.data.userId == request.auth.uid;
+    }
+    match /resources/{resourceId} {
+      allow read: if signedIn();
+      // Seeding is console/Admin SDK only; students have no resource write grants.
+    }
+    function validSavedResource(data) {
+      return data.keys().hasAll(['userId', 'resourceId', 'personalNote', 'favorite', 'savedAt', 'updatedAt'])
+        && data.keys().hasOnly(['userId', 'resourceId', 'personalNote', 'favorite', 'savedAt', 'updatedAt'])
+        && data.userId == request.auth.uid && data.resourceId is string && data.resourceId.size() > 0
+        && data.favorite is bool && data.savedAt is timestamp
+        && data.personalNote is string && data.personalNote.size() <= 1000;
+    }
+    match /saved_resources/{savedId} {
+      allow get: if student() && (!exists(/databases/$(database)/documents/saved_resources/$(savedId))
+        || resource.data.userId == request.auth.uid);
+      allow list: if student() && resource.data.userId == request.auth.uid;
+      // Private bookmarks may reference bundled content with no resource document.
+      allow create: if student() && validSavedResource(request.resource.data)
+        && savedId == request.auth.uid + '_' + request.resource.data.resourceId
+        && request.resource.data.savedAt == request.time && request.resource.data.updatedAt == request.time
+        && request.resource.data.favorite == false && request.resource.data.personalNote == '';
+      allow update: if student() && resource.data.userId == request.auth.uid
+        && validSavedResource(request.resource.data)
+        && request.resource.data.userId == resource.data.userId
+        && request.resource.data.resourceId == resource.data.resourceId
+        && request.resource.data.savedAt == resource.data.savedAt
+        && request.resource.data.updatedAt == request.time
+        && (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['personalNote', 'favorite', 'updatedAt'])
+          // Upgrade the owner's old saved schema on edit, removing obsolete fields.
+          || (!('personalNote' in resource.data) && !('favorite' in resource.data)
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['personalNote', 'favorite', 'updatedAt', 'completed', 'completedAt', 'reflection'])));
+      allow delete: if student() && resource.data.userId == request.auth.uid;
+    }
+    // Legacy bot chat_messages and top-level messages have no client grants.
+  }
+}
