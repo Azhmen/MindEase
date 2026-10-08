@@ -11,13 +11,13 @@ Services in src/services/user-profile.ts:
 
 Registration's createUserProfile and getUserProfile behavior is unchanged. Updates never change uid, email, role or createdAt, and never call Firebase Auth email/password update APIs.
 
-The directory transaction updates only name, title and specialization. active and other existing public/admin fields are preserved, including when active is absent/false. Private bio, location, extension and email are never copied there. An existing directory entry is required: missing membership produces a readable administrator-setup error and neither document is updated. No counselor-directory creation/deletion or self-activation is granted.
+The profile editing transaction updates only name, title and specialization. Existing active and public/admin fields are preserved. Private bio, location, extension and email are never copied there. Registration/login/restored dashboard setup separately creates missing own directory membership; it never reactivates an existing disabled record. See counselor-discovery.md for the current provisioning policy.
 
 Rules permit only the counselor's own editable fields, enforce lengths/timestamps and require public profile synchronization through getAfter. Directory updates permit only the three public fields and require a matching private-profile update. Student profile updates, foreign-account edits and identity/status changes remain denied. Every other collection rule is unchanged; Kiyathan's Availability/Session and other owners' CRUD services are unchanged.
 
-Dashboard reads profile name and title on navigation focus, so returning from Profile reflects saved values. Existing student chat/booking pickers read synchronized directory name/title on navigation focus/reload. Existing appointments retain the counselor name stored when booked; historical booking data is not rewritten.
+Dashboard reads profile name and title on navigation focus, so returning from Profile reflects saved values. Student chat/booking pickers now use realtime directory listeners. Existing appointments retain the counselor name stored when booked; historical booking data is not rewritten.
 
-Manual Firebase steps: publish firestore.rules. Existing users/{uid}.role must be counselor, with an administrator-provisioned counselor_directory/{same Auth UID} entry. No new collection, Auth provider or indexes are needed.
+Manual Firebase steps: publish firestore.rules. Existing users/{uid}.role must be counselor; missing own directory membership is then provisioned automatically on registration/login/dashboard setup. No new collection, Auth provider or indexes are needed.
 
 Validation: node scripts/test-counselor-profile.cjs verifies edit/trim/limits, atomic failures, persistence, public picker updates, identity/privacy/active preservation and role isolation. Emulator tests are provided in scripts/test-counselor-profile-rules.cjs; run inside the Firestore emulator before production use. Real Firebase/browser acceptance is not replaced by mocks.
 

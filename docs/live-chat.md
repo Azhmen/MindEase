@@ -18,7 +18,7 @@ One stable thread per student prevents duplicate threads across devices. `create
 
 `chat_threads/{threadId}/messages/{messageId}` stores `senderId` (authenticated UID), `senderRole` (`student` or `counselor` from the user's profile), trimmed `text` (1–2,000 characters), and `createdAt` (server timestamp). Document IDs supply `id` when reading. `sendMessage()` batches each message with the thread preview update, so they succeed or fail together.
 
-`counselor_directory/{counselorUid}` stores `name` (required string), optional public `title`, and optional boolean `active`. Omitted active means true; false stops new assignments. Directory availability is not online presence. The app uses Active counselor and explains replies may take time; it does not claim a counselor is logged in. Inactive counselors can continue existing assigned conversations. Removing their directory membership revokes counselor chat access.
+`counselor_directory/{counselorUid}` stores name, optional public title/specialization, and active. Discovery now requires `active: true`; omitted active does not count as active. Optional `chatAvailable: false` prevents new chat assignments. Registered and anonymous support use a realtime directory listener. Directory availability is not online presence. Inactive counselors can continue existing assigned conversations. Removing their directory membership revokes counselor chat access.
 
 Directory membership is admin-maintained; clients cannot create or update it. Only public display details belong here. Actual counselor UIDs must be verified against Firebase Authentication and users profiles.
 
@@ -38,7 +38,7 @@ ChatHeader, ChatBubble, and SuggestedReply are reused with the existing theme an
 
 1. Keep existing Firebase environment variables, Email/Password Authentication, and Firestore.
 2. Register a real counselor account using the existing app flow. Verify its actual UID in Firebase Authentication and confirm `users/{uid}.role` is `counselor`.
-3. In Firestore console create `counselor_directory/{that exact Auth UID}` with `name`, optionally `title`, and a boolean `active: true`. Repeat for multiple counselors to test the picker. Directory writes are console/Admin SDK only. Choosing counselor role at signup alone does not grant private chat access.
+3. Publish the updated rules, then sign in/register as each real counselor. Missing directory entries are created automatically at their exact Auth UID; existing administrator settings are preserved. Existing legacy records must have boolean `active: true` to appear. The emulator/service tests use multiple isolated counselor fixtures, never production seed records. See counselor-discovery.md.
 4. Review and publish `firestore.rules` in Firestore Database → Rules. Remove overlapping broad test-mode grants. New threads validate counselor directory membership, active status, and counselor profile role. Reads/writes require the correct assigned participant and sender UID/role. Timestamps/text are validated, and assignments remain immutable; message updates/deletes require the original sender. Users and mood_entries rules remain unchanged.
 5. Sign in as a student to start the conversation. Default Firestore single-field indexes are sufficient; no custom composite index is needed. No hardcoded UID or external AI API key is used.
 
