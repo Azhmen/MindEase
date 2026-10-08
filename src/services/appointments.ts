@@ -1,7 +1,8 @@
-import { collection, doc, getDoc, getDocs, query, runTransaction, serverTimestamp, where, type Timestamp } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, onSnapshot, query, runTransaction, serverTimestamp, where, type Timestamp } from 'firebase/firestore';
 import { db } from '@/config/firebase';
 import { requireUserId } from '@/services/student-session';
 import { getUserProfile } from '@/services/user-profile';
+import { directoryCounselor, subscribeToDirectory } from '@/services/counselor-directory';
 
 // Tharukanan owns appointments. Cancellation is a soft delete; no session-status CRUD.
 export type SessionFormat = 'Virtual' | 'In-Person';
@@ -14,7 +15,7 @@ export interface Appointment {
 export interface BookingDetails {
   counselorId: string; appointmentDate: string; appointmentTime: string; sessionFormat: SessionFormat;
 }
-export interface BookingCounselor { id: string; name: string; title?: string; specialty?: string }
+export interface BookingCounselor { id: string; name: string; title?: string; specialty?: string; bookable?: boolean }
 export async function requireStudentSession() {
   const uid = requireUserId();
   const profile = await getUserProfile(uid);
@@ -39,13 +40,33 @@ export function validateSchedule(details: Pick<BookingDetails, 'appointmentDate'
 }
 export async function getBookingCounselors(): Promise<BookingCounselor[]> {
   const uid = await requireStudentSession();
-  const result = await getDocs(collection(db, 'counselor_directory'));
+  const result = await getDocs(query(collection(db, 'counselor_directory'), where('active', '==', true)));
   assertSession(uid);
   return result.docs.flatMap(item => {
     const data = item.data();
-    return (data.active === undefined || data.active === true) && typeof data.name === 'string' && data.name.trim()
-      ? [{ id: item.id, name: data.name.trim(), title: typeof data.title === 'string' ? data.title : undefined, specialty: typeof data.specialty === 'string' ? data.specialty : undefined }] : [];
+    const counselor = directoryCounselor(item.id, data, 'booking');
+    return counselor ? [{ ...counselor, specialty: counselor.specialization }] : [];
   }).sort((a, b) => a.name.localeCompare(b.name));
+}
+export function subscribeToBookingCounselors(onCounselors: (rows: BookingCounselor[]) => void, onError: (error: Error) => void) {
+  const uid = requireUserId();
+  let counselors: BookingCounselor[] = [], slots: { counselorId: string; date: string; startTime: string }[] = [];
+  let directoryReady = false, slotsReady = false;
+  const emit = () => {
+    if (!directoryReady || !slotsReady) return;
+    onCounselors(counselors.map(row => ({ ...row, bookable: slots.some(slot => slot.counselorId === row.id && new Date(slot.date + 'T' + slot.startTime + ':00').getTime() > Date.now()) })));
+  };
+  const stopDirectory = subscribeToDirectory('booking', rows => { counselors = rows.map(row => ({ ...row, specialty: row.specialization })); directoryReady = true; emit(); }, onError);
+  let stopSlots: () => void;
+  try {
+    stopSlots = onSnapshot(query(collection(db, 'counselor_availability'), where('isAvailable', '==', true)), snapshot => {
+      try {
+        assertSession(uid);
+        slots = snapshot.docs.map(item => item.data() as typeof slots[number]); slotsReady = true; emit();
+      } catch (error) { onError(error instanceof Error ? error : new Error('Could not load availability.')); }
+    }, onError);
+  } catch (error) { stopDirectory(); throw error; }
+  return () => { stopDirectory(); stopSlots(); };
 }
 export async function createAppointment(id: string, ownerUid: string, details: BookingDetails, note = '') {
   const uid = await requireStudentSession();
@@ -64,7 +85,7 @@ export async function createAppointment(id: string, ownerUid: string, details: B
     }
     const directory = await tx.get(doc(db, 'counselor_directory', details.counselorId));
     const counselor = directory.exists() ? directory.data() : null;
-    if (!counselor || counselor.active === false || typeof counselor.name !== 'string' || !counselor.name.trim()) throw new Error('This counselor is unavailable. Please choose another counselor.');
+    if (!counselor || !directoryCounselor(details.counselorId, counselor, 'booking')) throw new Error('This counselor is unavailable. Please choose another counselor.');
     assertSession(uid);
     tx.set(ref, { counselorId: details.counselorId, appointmentDate: details.appointmentDate, appointmentTime: details.appointmentTime, sessionFormat: details.sessionFormat, studentId: uid, counselorName: counselor.name, status: 'booked', createdAt: serverTimestamp(), updatedAt: serverTimestamp() });
     if (text) tx.set(doc(db, 'pre_session_notes', id), { studentId: uid, appointmentId: id, note: text, createdAt: serverTimestamp(), updatedAt: serverTimestamp() });

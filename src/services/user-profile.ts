@@ -125,6 +125,24 @@ export async function createUserProfile(profile: CreateUserProfileInput): Promis
   });
 }
 
+// Create missing membership only. Existing admin activation and availability
+// settings must never be overwritten by login or registration retries.
+export async function ensureCurrentCounselorDirectory(): Promise<void> {
+  const uid = counselorAuthUid();
+  await runTransaction(db, async tx => {
+    const privateRef = doc(db, 'users', uid), publicRef = doc(db, 'counselor_directory', uid);
+    const profile = await tx.get(privateRef), directory = await tx.get(publicRef);
+    assertCounselorAuth(uid);
+    if (!profile.exists() || profile.data().role !== 'counselor') throw new Error('Please sign in with a counselor account.');
+    if (directory.exists()) return;
+    const fields = validateCounselorProfile(profile.data() as CounselorProfileInput);
+    tx.set(publicRef, {
+      name: fields.name, title: fields.title, specialization: fields.specialization,
+      active: true, bookingAvailable: true, chatAvailable: true, updatedAt: serverTimestamp(),
+    });
+  });
+}
+
 // Returns null when the user has not created a profile yet.
 export async function getUserProfile(uid: string): Promise<UserProfile | null> {
   const snapshot = await getDoc(doc(db, 'users', uid));

@@ -3,7 +3,7 @@ import { FormPanel, presentation } from '@/components/presentation';
 import { LoadingState } from '@/components/student-screen';
 import { useCallback, useState } from 'react';
 import { useFocusEffect } from 'expo-router';
-import { getAvailableSlotsForBooking, type AvailabilitySlot } from '@/services/counselor-management';
+import { subscribeToAvailableSlotsForBooking, type AvailabilitySlot } from '@/services/counselor-management';
 import { getAuthErrorMessage } from '@/utils/auth';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { AppText } from '@/components/text';
@@ -20,8 +20,10 @@ export function Choice({ label, selected, onPress, disabled = false }: { label: 
 export function SchedulePicker({ counselorId, value, onChange, disabled = false }: { counselorId: string; value: Pick<BookingDetails, 'appointmentDate' | 'appointmentTime' | 'sessionFormat'>; onChange: (value: Pick<BookingDetails, 'appointmentDate' | 'appointmentTime' | 'sessionFormat'>) => void; disabled?: boolean }) {
   const [slots, setSlots] = useState<AvailabilitySlot[]>([]), [loading, setLoading] = useState(false), [error, setError] = useState(''), [attempt, setAttempt] = useState(0);
   useFocusEffect(useCallback(() => { void attempt; let active = true; setSlots([]); setError(''); if (!counselorId) { setLoading(false); return; } setLoading(true);
-    getAvailableSlotsForBooking(counselorId).then(result => { if (active) setSlots(result); }).catch(err => { if (active) setError(getAuthErrorMessage(err)); }).finally(() => { if (active) setLoading(false); });
-    return () => { active = false; };
+    let stop: (() => void) | undefined;
+    try { stop = subscribeToAvailableSlotsForBooking(counselorId, result => { if (active) { setSlots(result); setLoading(false); } }, err => { if (active) { setSlots([]); setError(getAuthErrorMessage(err)); setLoading(false); } }); }
+    catch (err) { setError(getAuthErrorMessage(err)); setLoading(false); }
+    return () => { active = false; stop?.(); };
   }, [counselorId, attempt]));
   const dates = slots.length ? [...new Set(slots.map(slot => slot.date))].map(date => ({ value: date, label: bookingDateLabel(date) })) : suggestedBookingDates();
   const matching = slots.filter(slot => slot.date === value.appointmentDate && slot.mode === (value.sessionFormat === 'Virtual' ? 'virtual' : 'in_person'));

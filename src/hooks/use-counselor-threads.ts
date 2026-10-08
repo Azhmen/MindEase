@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ensureCurrentCounselorDirectory } from '@/services/user-profile';
 import { getCurrentUser } from '@/services/auth';
 import { subscribeToCounselorThreads, type ChatThread } from '@/services/chat';
 import { subscribeToCounselorThreads as subscribeToAnonymousThreads, type AnonymousChatThread } from '@/services/anonymous-chat';
@@ -24,24 +25,34 @@ export function useCounselorThreads() {
   useEffect(() => {
     let active = true, failed = false, studentReady = false, anonymousReady = false;
     const stops: (() => void)[] = [];
-    function fail(err: unknown) {
+    function fail(err: unknown, source = 'Counselor directory setup') {
       if (!active || failed) return;
-      failed = true; setError(getAuthErrorMessage(err)); setLoading(false);
+      const denied = typeof err === 'object' && err !== null && 'code' in err && err.code === 'permission-denied';
+      failed = true;
+      setError(denied
+        ? `${source} was denied. Confirm the latest Firestore rules are published in this app's Firebase project and your counselor directory document uses your exact account UID, then retry.`
+        : getAuthErrorMessage(err));
+      setLoading(false);
       setStudentThreads([]); setAnonymousThreads([]);
       stops.splice(0).forEach(stop => stop());
     }
-    try {
+    async function connect() {
+      if (!uid) throw new Error('Please sign in with your counselor account.');
+      // Also handles accounts restored directly into the counselor layout.
+      await ensureCurrentCounselorDirectory();
+      if (!active) return;
       stops.push(subscribeToCounselorThreads(data => {
         if (!active || failed) return;
         setStudentThreads(data); studentReady = true;
         if (anonymousReady) setLoading(false);
-      }, fail));
+      }, err => fail(err, 'Registered student chat access')));
       if (!failed) stops.push(subscribeToAnonymousThreads(data => {
         if (!active || failed) return;
         setAnonymousThreads(data); anonymousReady = true;
         if (studentReady) setLoading(false);
-      }, fail));
-    } catch (err) { fail(err); }
+      }, err => fail(err, 'Anonymous student chat access')));
+    }
+    void connect().catch(fail);
     return () => { active = false; stops.forEach(stop => stop()); };
   }, [uid, attempt]);
   const threads: CounselorThread[] = [...studentThreads, ...anonymousThreads].sort((a, b) =>

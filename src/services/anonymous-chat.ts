@@ -4,6 +4,7 @@ import { getCurrentUser } from '@/services/auth';
 import { getUserProfile } from '@/services/user-profile';
 import { getAnonymousSession, requireAnonymousUid } from '@/services/anonymous-session';
 import { getCounselor, type ChatMessage, type ChatThread } from '@/services/chat';
+import { directoryCounselor } from '@/services/counselor-directory';
 
 export interface AnonymousChatThread extends ChatThread {
   anonymous: true;
@@ -41,7 +42,7 @@ export async function createOrGetChatThread(counselorId: string) {
     }
     // Re-read the directory inside the transaction to avoid stale assignment.
     const directory = await transaction.get(doc(db, 'counselor_directory', counselorId));
-    if (!directory.exists() || directory.data().active === false) throw new Error('This counselor is no longer accepting new chats.');
+    if (!directory.exists() || !directoryCounselor(counselorId, directory.data(), 'chat')) throw new Error('This counselor is no longer accepting new chats.');
     if (requireAnonymousUid() !== uid) throw new Error('Your anonymous session changed.');
     transaction.set(ref, { sessionId, anonymousUid: uid, counselorId, createdAt: serverTimestamp(), lastMessage: '', lastMessageAt: null });
   });

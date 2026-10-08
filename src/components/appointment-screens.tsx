@@ -11,7 +11,7 @@ import { CareButton, StudentCard, studentStyles } from '@/components/student-ui'
 import { LoadingState, StudentScreen, StatusMessage } from '@/components/student-screen';
 import { useBookingDraft } from '@/components/booking-draft';
 import { AppointmentSummary, Choice, SchedulePicker, TopicsPicker, appointmentStyles as styles } from '@/components/appointment-ui';
-import { appointmentStart, cancelAppointment, createAppointment, getAppointment, getAppointmentsForStudent, getBookingCounselors, newAppointmentId, updateAppointment, validateSchedule, type Appointment, type BookingCounselor } from '@/services/appointments';
+import { appointmentStart, cancelAppointment, createAppointment, getAppointment, getAppointmentsForStudent, subscribeToBookingCounselors, newAppointmentId, updateAppointment, validateSchedule, type Appointment, type BookingCounselor } from '@/services/appointments';
 import { createPreSessionNote, deletePreSessionNote, getPreSessionNote, updatePreSessionNote, type PreSessionNote } from '@/services/pre-session-notes';
 import { AppointmentReminderStatus } from '@/components/appointment-reminder-status';
 import { AppointmentReminderBanner } from '@/components/appointment-reminder-banner';
@@ -102,13 +102,17 @@ export function BookAppointmentScreen() {
   useFocusEffect(useCallback(() => {
     void attempt;
     let active = true; setLoading(true); setError('');
-    getBookingCounselors().then(value => { if (active) setCounselors(value); }).catch(err => { if (active) setError(getAuthErrorMessage(err)); }).finally(() => { if (active) setLoading(false); });
-    return () => { active = false; };
+    let stop: (() => void) | undefined;
+    try {
+      stop = subscribeToBookingCounselors(value => { if (active) { setCounselors(value); setLoading(false); } }, err => { if (active) { setCounselors([]); setError(getAuthErrorMessage(err)); setLoading(false); } });
+    } catch (err) { setError(getAuthErrorMessage(err)); setLoading(false); }
+    return () => { active = false; stop?.(); };
   }, [attempt]));
   function next() {
     try {
       const counselor = counselors.find(item => item.id === draft.counselorId);
       if (!counselor) throw new Error('Select a counselor.');
+      if (counselor.bookable === false) throw new Error('This counselor currently has no future available slots. Choose another counselor.');
       validateSchedule(draft);
       setDraft({ ...draft, id: draft.id || newAppointmentId(), ownerUid: requireUserId(), counselorName: counselor.name });
       setValidation(''); router.push('/student/appointments/pre-session');
@@ -120,7 +124,7 @@ export function BookAppointmentScreen() {
     {loading ? <LoadingState /> : null}<StatusMessage message={error || validation} error />
     {error ? <CareButton title="Reload counselors" secondary onPress={() => setAttempt(value => value + 1)} /> : null}
     {!loading && !error && !counselors.length ? <StudentCard><AppText>No active counselors are available in the directory yet. Please contact campus support or try again later.</AppText><CareButton title="Refresh" secondary onPress={() => setAttempt(value => value + 1)} /></StudentCard> : null}
-    {counselors.map(counselor => <StudentCard key={counselor.id} style={{ backgroundColor: draft.counselorId === counselor.id ? Colors.carePale : Colors.surface, padding: 20, borderRadius: 24 }}><View style={studentStyles.row}><CareIcon name="profile" size={30} /><View style={studentStyles.flex}><AppText style={studentStyles.section}>{counselor.name}</AppText>{counselor.title ? <AppText style={styles.small}>{counselor.title}</AppText> : null}{counselor.specialty ? <AppText style={styles.small}>{counselor.specialty}</AppText> : null}</View></View><Choice label={draft.counselorId === counselor.id ? 'Selected' : 'Select Counselor'} selected={draft.counselorId === counselor.id} onPress={() => setDraft({ ...draft, counselorId: counselor.id, counselorName: counselor.name, appointmentTime: '' })} /></StudentCard>)}
+    {counselors.map(counselor => <StudentCard key={counselor.id} style={{ backgroundColor: draft.counselorId === counselor.id ? Colors.carePale : Colors.surface, padding: 20, borderRadius: 24 }}><View style={studentStyles.row}><CareIcon name="profile" size={30} /><View style={studentStyles.flex}><AppText style={studentStyles.section}>{counselor.name}</AppText>{counselor.title ? <AppText style={styles.small}>{counselor.title}</AppText> : null}{counselor.specialty ? <AppText style={styles.small}>{counselor.specialty}</AppText> : null}</View></View>{counselor.bookable === false ? <AppText style={styles.small}>Currently unavailable</AppText> : null}<Choice disabled={counselor.bookable === false} label={draft.counselorId === counselor.id ? 'Selected' : 'Select Counselor'} selected={draft.counselorId === counselor.id} onPress={() => setDraft({ ...draft, counselorId: counselor.id, counselorName: counselor.name, appointmentTime: '' })} /></StudentCard>)}
     <SchedulePicker counselorId={draft.counselorId} value={draft} onChange={value => setDraft({ ...draft, ...value })} />
     <CareButton title="Continue to Pre-Session Note" disabled={loading || !!error || !counselors.length} onPress={next} />
     <CareButton title="My Appointments" secondary onPress={() => router.replace('/student/appointments')} />

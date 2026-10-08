@@ -8,7 +8,7 @@ import { AppText } from '@/components/text';
 import { Colors } from '@/constants/colors';
 import { loginUser, logoutUser } from '@/services/auth';
 import { startAnonymousSession } from '@/services/anonymous-session';
-import { getUserProfile, type UserRole } from '@/services/user-profile';
+import { ensureCurrentCounselorDirectory, getUserProfile, type UserRole } from '@/services/user-profile';
 import { getAuthErrorMessage, getRoleRoute, isValidEmail } from '@/utils/auth';
 
 export default function LoginRoute() {
@@ -51,6 +51,7 @@ export default function LoginRoute() {
         await logoutUser();
         throw new Error(`This account does not match the selected ${role} role. Select the correct role and sign in again.`);
       }
+      if (profile.role === 'counselor') await ensureCurrentCounselorDirectory();
       router.replace(getRoleRoute(profile.role));
     } catch (error) {
       setError(getAuthErrorMessage(error));

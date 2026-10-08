@@ -2,12 +2,14 @@ import { collection, doc, getDoc, getDocs, onSnapshot, orderBy, query, runTransa
 import { db } from '@/config/firebase';
 import { requireUserId } from '@/services/student-session';
 import { getUserProfile, type UserRole } from '@/services/user-profile';
+import { directoryCounselor, subscribeToDirectory } from '@/services/counselor-directory';
 
 // Azhmen: live chat with optional sender-only message editing/deletion.
 export interface Counselor {
   id: string;
   name: string;
   title?: string;
+  specialization?: string;
   active: boolean;
 }
 export interface ChatThread {
@@ -73,12 +75,15 @@ async function getSession() {
   return { uid, role: profile.role };
 }
 function counselorFromData(id: string, data: Record<string, unknown>): Counselor | null {
-  if (typeof data.name !== 'string' || !data.name.trim()) return null;
-  return { id, name: data.name.trim(), title: typeof data.title === 'string' ? data.title : undefined, active: data.active === undefined || data.active === true };
+  const counselor = directoryCounselor(id, data, 'chat');
+  return counselor ? { ...counselor, active: true } : null;
+}
+export function subscribeToActiveCounselors(onCounselors: (rows: Counselor[]) => void, onError: (error: Error) => void) {
+  return subscribeToDirectory('chat', rows => onCounselors(rows.map(row => ({ ...row, active: true }))), onError);
 }
 export async function getActiveCounselors(): Promise<Counselor[]> {
   requireUserId();
-  const snapshot = await getDocs(collection(db, 'counselor_directory'));
+  const snapshot = await getDocs(query(collection(db, 'counselor_directory'), where('active', '==', true)));
   return snapshot.docs.flatMap(entry => {
     const counselor = counselorFromData(entry.id, entry.data());
     return counselor?.active ? [counselor] : [];

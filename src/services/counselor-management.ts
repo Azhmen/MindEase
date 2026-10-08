@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, getDocs, query, runTransaction, serverTimestamp, where, type Timestamp } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, onSnapshot, query, runTransaction, serverTimestamp, where, type Timestamp } from 'firebase/firestore';
 import { auth, db } from '@/config/firebase';
 import { requireUserId } from '@/services/student-session';
 import { getUserProfile } from '@/services/user-profile';
@@ -92,6 +92,17 @@ export async function getAvailableSlotsForBooking(counselorId: string) {
   return result.docs.map(item => ({ ...item.data(), id: item.id } as AvailabilitySlot))
     .filter(slot => slot.counselorId === counselorId && new Date(slot.date + 'T' + slot.startTime + ':00').getTime() > Date.now())
     .sort((a, b) => (a.date + a.startTime).localeCompare(b.date + b.startTime));
+}
+export function subscribeToAvailableSlotsForBooking(counselorId: string, onSlots: (slots: AvailabilitySlot[]) => void, onError: (error: Error) => void) {
+  const uid = requireUserId();
+  return onSnapshot(query(collection(db, 'counselor_availability'), where('isAvailable', '==', true)), snapshot => {
+    try {
+      assertSession(uid);
+      onSlots(snapshot.docs.map(item => ({ ...item.data(), id: item.id } as AvailabilitySlot))
+        .filter(slot => slot.counselorId === counselorId && new Date(slot.date + 'T' + slot.startTime + ':00').getTime() > Date.now())
+        .sort((a, b) => (a.date + a.startTime).localeCompare(b.date + b.startTime)));
+    } catch (error) { onError(error instanceof Error ? error : new Error('Could not load availability.')); }
+  }, onError);
 }
 export async function assertAvailableBooking(details: BookingDetails) {
   const slots = await getAvailableSlotsForBooking(details.counselorId);
