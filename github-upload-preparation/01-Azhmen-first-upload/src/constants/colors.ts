@@ -1,0 +1,31 @@
+const Colors = {
+  background: '#F4F3EC',
+  surface: '#E5EFE6',
+  primary: '#003D2B',
+  primaryPressed: '#002E20',
+  onPrimary: '#FFFFFF',
+  text: '#1F2933',
+  textSecondary: '#596B62',
+  border: '#DDE5DF',
+  placeholder: '#596B62',
+  disabled: '#B8C5C4',
+  error: '#B42318',
+  careBackground: '#F4F3EC',
+  careGreen: '#003D2B',
+  careMuted: '#596B62',
+  careAccent: '#77A58D',
+  carePale: '#D5EADF',
+  careInput: '#E3ECE3',
+  careBorder: '#DDE5DF',
+  careBadge: '#EEF3FA',
+  careAlert: '#FFF0EE',
+  careAlertBorder: '#F3D2CB',
+  // Legacy token name retained for existing components; accent is soft sage.
+  careLavender: '#EDF0F6',
+  careAmber: '#FFF5E6',
+  overlay: 'rgba(0, 30, 21, 0.28)',
+  canvas: '#E7ECE7',
+  careShadow: 'rgba(0, 61, 43, 0.06)',
+} as const;
+
+export { Colors };

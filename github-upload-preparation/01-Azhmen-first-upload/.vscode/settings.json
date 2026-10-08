@@ -1,0 +1,13 @@
+{
+  "git.ignoredRepositories": [
+    "C:/Users/Azhmen/mindease-expo/tmp/member-worktrees/azhmen",
+    "C:/Users/Azhmen/mindease-expo/tmp/member-worktrees/gihani",
+    "C:/Users/Azhmen/mindease-expo/tmp/member-worktrees/kiyathan",
+    "C:/Users/Azhmen/mindease-expo/tmp/member-worktrees/tharukanan"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  }
+}

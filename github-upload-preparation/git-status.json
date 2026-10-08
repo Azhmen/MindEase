@@ -1,0 +1,3332 @@
+{
+  "records": [
+    {
+      "status": " M",
+      "path": ".gitignore"
+    },
+    {
+      "status": " M",
+      "path": "app.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/anonymouschat.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/anonymouscrisis.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/anonymousedit.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/anonymoushistory.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/anonymoushome.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/anonymousmood.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentbook.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentcancelled.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentconfirm.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentedit.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentempty.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmenterror.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentnocounselors.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentnote.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointments.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/appointmentsuccess.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/availability.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/availabilitydelete.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/availabilityedit.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/availabilityempty.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/availabilitynew.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/chat.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorcrisis.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorerror.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorinbox.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorloading.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselormany.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorone.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorprofile.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorprofiledashboard.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorprofileedit.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorsessions.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorseveralsessions.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/counselorzero.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/crisis.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/edit.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/history.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/historyreflection.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/historyreflectionerror.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/home.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/login.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/mood.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/profile.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/register.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcedetail.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcefavorite.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcenoteedit.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourceremove.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resources.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcesaved.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcesavedempty.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcescategory.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcesempty.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourceserror.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/resourcessearch.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/sessionclosed.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/sessiondetails.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/sessionerror.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/sessions.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/studentprivacy.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/studentprofileedit.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/studentsupport.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/studentsupportfaq.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/studentsupportguide.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/student-previews/support.html"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/ui-polish/home.png"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/ui-polish/mood.png"
+    },
+    {
+      "status": " M",
+      "path": "docs/mood-ownership.md"
+    },
+    {
+      "status": " A",
+      "path": "eas.json"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/.env.example"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/.gitignore"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/app.json"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/docs/appointment-reminders.md"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/docs/mood-ownership.md"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/package-lock.json"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/package.json"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/render-student-previews.cjs"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/_layout.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/anonymous/home.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/anonymous/mood/history.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/chats.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/dashboard.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/profile.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/support.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/index.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/home.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/mood/edit/[id].tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/mood/index.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/profile.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/support.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/app-card.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/app-text-input.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-reminder-banner.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-reminder-provider.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/auth-screen.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/care-icon.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/care-login-layout.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/chat-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/counselor-management-screens.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/counselor-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/crisis-support-content.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/live-chat-screen.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-form.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-option-card.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/notification-preferences.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/presentation.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/primary-button.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/student-screen.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/student-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/wellness-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/care-layout.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/colors.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/spacing.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/typography.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/appointment-reminders.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/counselor-management.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/reminder-notifications.native.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/reminder-notifications.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/appointment-reminder-plan.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/tsconfig.json"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Gihani.zip"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Gihani/scripts/test-saved-resource-flow.cjs"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Gihani/src/app/student/mood/history.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Gihani/src/components/gihani-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Gihani/src/components/mood-reflection-panel.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Gihani/src/components/resource-screens.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Kiyathan.zip"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Kiyathan/scripts/test-kiyathan-services.cjs"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Kiyathan/src/components/counselor-management-screens.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Kiyathan/src/services/counselor-management.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan.zip"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/scripts/test-reminders-and-crisis.cjs"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/components/appointment-reminder-banner.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/components/appointment-reminder-provider.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/components/appointment-screens.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/components/appointment-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/services/appointment-reminders.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/services/reminder-notifications.native.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/services/reminder-notifications.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/Tharukanan/src/utils/appointment-reminder-plan.ts"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/UPLOAD-GUIDE.md"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/manifest.json"
+    },
+    {
+      "status": " M",
+      "path": "github-upload-preparation/prepare.py"
+    },
+    {
+      "status": " M",
+      "path": "package-lock.json"
+    },
+    {
+      "status": " M",
+      "path": "package.json"
+    },
+    {
+      "status": " M",
+      "path": "scripts/render-student-previews.cjs"
+    },
+    {
+      "status": " M",
+      "path": "scripts/test-availability-delete.cjs"
+    },
+    {
+      "status": " M",
+      "path": "scripts/test-reminder-status-ui.cjs"
+    },
+    {
+      "status": " M",
+      "path": "scripts/test-saved-resource-flow.cjs"
+    },
+    {
+      "status": " M",
+      "path": "scripts/test-temporary-feedback.cjs"
+    },
+    {
+      "status": " M",
+      "path": "src/app/_layout.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/anonymous/home.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/anonymous/mood/history.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/counselor/chats.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/counselor/dashboard.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/counselor/profile.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/counselor/support.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/index.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/student/home.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/student/mood/edit/[id].tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/student/mood/history.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/student/mood/index.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/student/profile.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/app/student/support.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/app-card.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/app-text-input.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/appointment-reminder-banner.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/appointment-screens.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/appointment-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/auth-screen.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/availability-date-picker.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/availability-time-picker.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/care-icon.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/care-login-layout.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/chat-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/counselor-management-screens.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/counselor-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/crisis-support-content.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/gihani-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/live-chat-screen.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/mood-form.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/mood-option-card.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/mood-reflection-panel.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/presentation.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/primary-button.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/resource-screens.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/student-screen.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/student-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/components/wellness-ui.tsx"
+    },
+    {
+      "status": " M",
+      "path": "src/constants/care-layout.ts"
+    },
+    {
+      "status": " M",
+      "path": "src/constants/colors.ts"
+    },
+    {
+      "status": " M",
+      "path": "src/constants/spacing.ts"
+    },
+    {
+      "status": " M",
+      "path": "src/constants/typography.ts"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/INSTALLER"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/METADATA"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/RECORD"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/REQUESTED"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/WHEEL"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_cmap.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_configuration.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_doc_common.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_encryption.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_font.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_page.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_page_labels.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_protocols.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_reader.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_utils.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_version.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/_writer.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/constants.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/errors.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/filters.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/pagerange.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/papersizes.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/types.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/__pycache__/xmp.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_cmap.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/_codecs.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/adobe_glyphs.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/core_font_metrics.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/pdfdoc.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/std.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/symbol.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/zapfding.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/_codecs.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/adobe_glyphs.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/core_font_metrics.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/pdfdoc.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/std.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/symbol.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_codecs/zapfding.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_configuration.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_base.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_cryptography.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_fallback.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_pycryptodome.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/_base.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/_cryptography.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/_fallback.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_crypt_providers/_pycryptodome.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_doc_common.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_encryption.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_font.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_page.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_page_labels.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_protocols.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_reader.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/__pycache__/_text_extractor.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/_fixed_width_page.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_manager.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_params.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/_fixed_width_page.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/_text_state_manager.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/_text_state_params.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_text_extraction/_text_extractor.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_utils.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_version.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/_writer.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/actions/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/actions/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/actions/__pycache__/_actions.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/actions/_actions.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/_base.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/_markup_annotations.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/_non_markup_annotations.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/_base.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/_markup_annotations.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/annotations/_non_markup_annotations.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/constants.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/errors.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/filters.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__init__.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_appearance_stream.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_base.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_color.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_data_structures.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_files.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_fit.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_image_inline.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_image_xobject.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_link.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_outline.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_rectangle.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_utils.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_viewerpref.cpython-313.pyc"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_appearance_stream.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_base.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_color.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_data_structures.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_files.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_fit.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_image_inline.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_image_xobject.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_link.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_outline.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_rectangle.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_utils.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/generic/_viewerpref.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/pagerange.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/papersizes.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/py.typed"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/types.py"
+    },
+    {
+      "status": " D",
+      "path": "tmp/pdf-tools/pypdf/xmp.py"
+    },
+    {
+      "status": "??",
+      "path": ".env.example"
+    },
+    {
+      "status": "??",
+      "path": "docs/final-verification.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/functional-reliability-pass.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/ui-polish-report.md"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/.vscode/extensions.json"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/.vscode/settings.json"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/docs/final-verification.md"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/docs/functional-reliability-pass.md"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/docs/ui-polish-report.md"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/eas.json"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/audit-visual-preservation.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointment-cancellation-ui.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointment-notifications.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointment-rules.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointments.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-availability-delete.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-gihani-rules.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-gihani-services.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-kiyathan-rules.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-kiyathan-services.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-mood-log-card.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-mood-rhythm-reflections.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-mood-rhythm.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-reminder-crisis-ui.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-reminder-status-ui.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-reminders-and-crisis.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-saved-resource-flow.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-temporary-feedback.cjs"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/availability.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/availability/edit/[id].tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/availability/new.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/schedule.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/session/[id].tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/sessions.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/_layout.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/book.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/confirm.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/edit/[id].tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/pre-session.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/success.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/mood/history.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/resources.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/resources/[id].tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/resources/saved.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-reminder-status.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-screens.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-date-picker.native.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-date-picker.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-picker-ui.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-time-picker.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/booking-draft.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/gihani-ui.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-log-card.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-reflection-panel.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/resource-screens.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/starter-resources.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/ui.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/hooks/use-temporary-feedback.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/gihani-session.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/mood-reflections.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/pre-session-notes.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/resources.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/saved-resources.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/availability-form.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/mood-rhythm.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/resource-search.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/saved-resource-errors.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Gihani/src/components/mood-log-card.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Gihani/src/utils/mood-rhythm.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Kiyathan/src/app/counselor/profile.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Kiyathan/src/app/counselor/support.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Kiyathan/src/components/availability-date-picker.native.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Kiyathan/src/components/availability-date-picker.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Kiyathan/src/components/availability-picker-ui.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Kiyathan/src/components/availability-time-picker.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Kiyathan/src/utils/availability-form.ts"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Tharukanan/src/components/appointment-reminder-status.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/Tharukanan/src/components/notification-preferences.tsx"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/git-status.json"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/pathspecs/azhmen.nul"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/pathspecs/gihani.nul"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/pathspecs/kiyathan.nul"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/pathspecs/main.nul"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/pathspecs/members.nul"
+    },
+    {
+      "status": "??",
+      "path": "github-upload-preparation/pathspecs/tharukanan.nul"
+    },
+    {
+      "status": "??",
+      "path": "scripts/test-appointment-cancellation-ui.cjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/test-mood-log-card.cjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/test-mood-rhythm-reflections.cjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/test-mood-rhythm.cjs"
+    },
+    {
+      "status": "??",
+      "path": "src/components/mood-log-card.tsx"
+    },
+    {
+      "status": "??",
+      "path": "src/constants/ui.ts"
+    },
+    {
+      "status": "??",
+      "path": "src/utils/mood-rhythm.ts"
+    }
+  ],
+  "categories": {
+    "modified": [
+      {
+        "status": " M",
+        "path": ".gitignore"
+      },
+      {
+        "status": " M",
+        "path": "app.json"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/anonymouschat.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/anonymouscrisis.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/anonymousedit.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/anonymoushistory.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/anonymoushome.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/anonymousmood.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentbook.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentcancelled.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentconfirm.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentedit.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentempty.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmenterror.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentnocounselors.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentnote.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointments.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/appointmentsuccess.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/availability.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/availabilitydelete.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/availabilityedit.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/availabilityempty.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/availabilitynew.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/chat.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorcrisis.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorerror.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorinbox.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorloading.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselormany.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorone.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorprofile.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorprofiledashboard.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorprofileedit.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorsessions.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorseveralsessions.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/counselorzero.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/crisis.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/edit.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/history.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/historyreflection.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/historyreflectionerror.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/home.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/login.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/mood.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/profile.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/register.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcedetail.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcefavorite.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcenoteedit.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourceremove.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resources.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcesaved.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcesavedempty.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcescategory.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcesempty.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourceserror.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/resourcessearch.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/sessionclosed.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/sessiondetails.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/sessionerror.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/sessions.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/studentprivacy.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/studentprofileedit.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/studentsupport.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/studentsupportfaq.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/studentsupportguide.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/student-previews/support.html"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/ui-polish/home.png"
+      },
+      {
+        "status": " M",
+        "path": "artifacts/ui-polish/mood.png"
+      },
+      {
+        "status": " M",
+        "path": "docs/mood-ownership.md"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/.env.example"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/.gitignore"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/app.json"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/docs/appointment-reminders.md"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/docs/mood-ownership.md"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/package-lock.json"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/package.json"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/render-student-previews.cjs"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/_layout.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/anonymous/home.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/anonymous/mood/history.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/chats.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/dashboard.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/profile.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/support.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/index.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/home.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/mood/edit/[id].tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/mood/index.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/profile.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/support.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/app-card.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/app-text-input.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-reminder-banner.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-reminder-provider.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/auth-screen.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/care-icon.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/care-login-layout.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/chat-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/counselor-management-screens.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/counselor-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/crisis-support-content.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/live-chat-screen.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-form.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-option-card.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/notification-preferences.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/presentation.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/primary-button.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/student-screen.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/student-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/wellness-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/care-layout.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/colors.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/spacing.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/typography.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/appointment-reminders.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/counselor-management.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/reminder-notifications.native.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/reminder-notifications.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/appointment-reminder-plan.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/tsconfig.json"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Gihani.zip"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Gihani/scripts/test-saved-resource-flow.cjs"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Gihani/src/app/student/mood/history.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Gihani/src/components/gihani-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Gihani/src/components/mood-reflection-panel.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Gihani/src/components/resource-screens.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Kiyathan.zip"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Kiyathan/scripts/test-kiyathan-services.cjs"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Kiyathan/src/components/counselor-management-screens.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Kiyathan/src/services/counselor-management.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan.zip"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/scripts/test-reminders-and-crisis.cjs"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/components/appointment-reminder-banner.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/components/appointment-reminder-provider.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/components/appointment-screens.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/components/appointment-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/services/appointment-reminders.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/services/reminder-notifications.native.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/services/reminder-notifications.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/Tharukanan/src/utils/appointment-reminder-plan.ts"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/UPLOAD-GUIDE.md"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/manifest.json"
+      },
+      {
+        "status": " M",
+        "path": "github-upload-preparation/prepare.py"
+      },
+      {
+        "status": " M",
+        "path": "package-lock.json"
+      },
+      {
+        "status": " M",
+        "path": "package.json"
+      },
+      {
+        "status": " M",
+        "path": "scripts/render-student-previews.cjs"
+      },
+      {
+        "status": " M",
+        "path": "scripts/test-availability-delete.cjs"
+      },
+      {
+        "status": " M",
+        "path": "scripts/test-reminder-status-ui.cjs"
+      },
+      {
+        "status": " M",
+        "path": "scripts/test-saved-resource-flow.cjs"
+      },
+      {
+        "status": " M",
+        "path": "scripts/test-temporary-feedback.cjs"
+      },
+      {
+        "status": " M",
+        "path": "src/app/_layout.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/anonymous/home.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/anonymous/mood/history.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/counselor/chats.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/counselor/dashboard.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/counselor/profile.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/counselor/support.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/index.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/student/home.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/student/mood/edit/[id].tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/student/mood/history.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/student/mood/index.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/student/profile.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/app/student/support.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/app-card.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/app-text-input.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/appointment-reminder-banner.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/appointment-screens.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/appointment-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/auth-screen.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/availability-date-picker.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/availability-time-picker.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/care-icon.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/care-login-layout.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/chat-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/counselor-management-screens.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/counselor-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/crisis-support-content.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/gihani-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/live-chat-screen.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/mood-form.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/mood-option-card.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/mood-reflection-panel.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/presentation.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/primary-button.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/resource-screens.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/student-screen.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/student-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/components/wellness-ui.tsx"
+      },
+      {
+        "status": " M",
+        "path": "src/constants/care-layout.ts"
+      },
+      {
+        "status": " M",
+        "path": "src/constants/colors.ts"
+      },
+      {
+        "status": " M",
+        "path": "src/constants/spacing.ts"
+      },
+      {
+        "status": " M",
+        "path": "src/constants/typography.ts"
+      }
+    ],
+    "new": [
+      {
+        "status": " A",
+        "path": "eas.json"
+      }
+    ],
+    "deleted": [
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/INSTALLER"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/METADATA"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/RECORD"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/REQUESTED"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/WHEEL"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf-6.19.0.dist-info/licenses/LICENSE"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_cmap.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_configuration.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_doc_common.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_encryption.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_font.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_page.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_page_labels.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_protocols.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_reader.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_utils.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_version.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/_writer.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/constants.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/errors.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/filters.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/pagerange.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/papersizes.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/types.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/__pycache__/xmp.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_cmap.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/_codecs.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/adobe_glyphs.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/core_font_metrics.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/pdfdoc.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/std.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/symbol.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/__pycache__/zapfding.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/_codecs.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/adobe_glyphs.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/core_font_metrics.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/pdfdoc.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/std.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/symbol.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_codecs/zapfding.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_configuration.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_base.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_cryptography.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_fallback.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/__pycache__/_pycryptodome.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/_base.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/_cryptography.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/_fallback.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_crypt_providers/_pycryptodome.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_doc_common.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_encryption.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_font.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_page.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_page_labels.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_protocols.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_reader.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/__pycache__/_text_extractor.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/_fixed_width_page.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_manager.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_params.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/_fixed_width_page.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/_text_state_manager.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_layout_mode/_text_state_params.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_text_extraction/_text_extractor.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_utils.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_version.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/_writer.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/actions/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/actions/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/actions/__pycache__/_actions.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/actions/_actions.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/_base.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/_markup_annotations.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/__pycache__/_non_markup_annotations.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/_base.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/_markup_annotations.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/annotations/_non_markup_annotations.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/constants.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/errors.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/filters.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__init__.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/__init__.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_appearance_stream.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_base.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_color.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_data_structures.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_files.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_fit.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_image_inline.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_image_xobject.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_link.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_outline.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_rectangle.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_utils.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/__pycache__/_viewerpref.cpython-313.pyc"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_appearance_stream.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_base.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_color.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_data_structures.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_files.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_fit.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_image_inline.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_image_xobject.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_link.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_outline.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_rectangle.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_utils.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/generic/_viewerpref.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/pagerange.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/papersizes.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/py.typed"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/types.py"
+      },
+      {
+        "status": " D",
+        "path": "tmp/pdf-tools/pypdf/xmp.py"
+      }
+    ],
+    "untracked": [
+      {
+        "status": "??",
+        "path": ".env.example"
+      },
+      {
+        "status": "??",
+        "path": "docs/final-verification.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/functional-reliability-pass.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/ui-polish-report.md"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/.vscode/extensions.json"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/.vscode/settings.json"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/docs/final-verification.md"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/docs/functional-reliability-pass.md"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/docs/ui-polish-report.md"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/eas.json"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/audit-visual-preservation.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointment-cancellation-ui.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointment-notifications.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointment-rules.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-appointments.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-availability-delete.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-gihani-rules.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-gihani-services.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-kiyathan-rules.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-kiyathan-services.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-mood-log-card.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-mood-rhythm-reflections.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-mood-rhythm.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-reminder-crisis-ui.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-reminder-status-ui.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-reminders-and-crisis.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-saved-resource-flow.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/scripts/test-temporary-feedback.cjs"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/availability.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/availability/edit/[id].tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/availability/new.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/schedule.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/session/[id].tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/counselor/sessions.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/_layout.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/book.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/confirm.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/edit/[id].tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/pre-session.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/(booking)/appointments/success.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/mood/history.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/resources.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/resources/[id].tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/app/student/resources/saved.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-reminder-status.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/appointment-screens.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-date-picker.native.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-date-picker.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-picker-ui.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/availability-time-picker.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/booking-draft.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/gihani-ui.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-log-card.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/mood-reflection-panel.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/components/resource-screens.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/starter-resources.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/constants/ui.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/hooks/use-temporary-feedback.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/gihani-session.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/mood-reflections.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/pre-session-notes.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/resources.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/services/saved-resources.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/availability-form.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/mood-rhythm.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/resource-search.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/01-Azhmen-first-upload/src/utils/saved-resource-errors.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Gihani/src/components/mood-log-card.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Gihani/src/utils/mood-rhythm.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Kiyathan/src/app/counselor/profile.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Kiyathan/src/app/counselor/support.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Kiyathan/src/components/availability-date-picker.native.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Kiyathan/src/components/availability-date-picker.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Kiyathan/src/components/availability-picker-ui.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Kiyathan/src/components/availability-time-picker.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Kiyathan/src/utils/availability-form.ts"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Tharukanan/src/components/appointment-reminder-status.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/Tharukanan/src/components/notification-preferences.tsx"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/git-status.json"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/pathspecs/azhmen.nul"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/pathspecs/gihani.nul"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/pathspecs/kiyathan.nul"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/pathspecs/main.nul"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/pathspecs/members.nul"
+      },
+      {
+        "status": "??",
+        "path": "github-upload-preparation/pathspecs/tharukanan.nul"
+      },
+      {
+        "status": "??",
+        "path": "scripts/test-appointment-cancellation-ui.cjs"
+      },
+      {
+        "status": "??",
+        "path": "scripts/test-mood-log-card.cjs"
+      },
+      {
+        "status": "??",
+        "path": "scripts/test-mood-rhythm-reflections.cjs"
+      },
+      {
+        "status": "??",
+        "path": "scripts/test-mood-rhythm.cjs"
+      },
+      {
+        "status": "??",
+        "path": "src/components/mood-log-card.tsx"
+      },
+      {
+        "status": "??",
+        "path": "src/constants/ui.ts"
+      },
+      {
+        "status": "??",
+        "path": "src/utils/mood-rhythm.ts"
+      }
+    ]
+  },
+  "counts": {
+    "modified": 195,
+    "new": 1,
+    "deleted": 125,
+    "untracked": 93
+  }
+}

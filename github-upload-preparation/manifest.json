@@ -1,0 +1,2574 @@
+{
+  "version": 2,
+  "updated": "2026-10-08",
+  "ownership": {
+    "Azhmen": [
+      "src/app/anonymous/_layout.tsx",
+      "src/app/anonymous/chat.tsx",
+      "src/app/anonymous/crisis-support.tsx",
+      "src/app/anonymous/home.tsx",
+      "src/app/anonymous/mood.tsx",
+      "src/app/anonymous/mood/edit/[id].tsx",
+      "src/app/anonymous/mood/history.tsx",
+      "src/app/counselor/chat/[threadId].tsx",
+      "src/app/counselor/chats.tsx",
+      "src/app/counselor/crisis-support.tsx",
+      "src/app/student/chat.tsx",
+      "src/app/student/crisis-support.tsx",
+      "src/app/student/mood/edit/[id].tsx",
+      "src/app/student/mood/index.tsx",
+      "src/components/anonymous-exit-button.tsx",
+      "src/components/chat-ui.tsx",
+      "src/components/crisis-support-content.tsx",
+      "src/components/live-chat-screen.tsx",
+      "src/components/mood-form.tsx",
+      "src/components/mood-option-card.tsx",
+      "src/components/student-live-support.tsx",
+      "src/hooks/use-counselor-threads.ts",
+      "src/services/anonymous-chat.ts",
+      "src/services/anonymous-mood.ts",
+      "src/services/anonymous-session.ts",
+      "src/services/chat.ts",
+      "src/services/mood.ts",
+      "src/utils/crisis-cues.ts"
+    ],
+    "Tharukanan": [
+      "src/app/student/(booking)/_layout.tsx",
+      "src/app/student/(booking)/appointments.tsx",
+      "src/app/student/(booking)/appointments/book.tsx",
+      "src/app/student/(booking)/appointments/confirm.tsx",
+      "src/app/student/(booking)/appointments/edit/[id].tsx",
+      "src/app/student/(booking)/appointments/pre-session.tsx",
+      "src/app/student/(booking)/appointments/success.tsx",
+      "src/components/appointment-reminder-banner.tsx",
+      "src/components/appointment-reminder-provider.tsx",
+      "src/components/appointment-reminder-status.tsx",
+      "src/components/appointment-screens.tsx",
+      "src/components/appointment-ui.tsx",
+      "src/components/booking-draft.tsx",
+      "src/components/notification-preferences.tsx",
+      "src/services/appointment-reminders.ts",
+      "src/services/appointments.ts",
+      "src/services/pre-session-notes.ts",
+      "src/services/reminder-notifications.native.ts",
+      "src/services/reminder-notifications.ts",
+      "src/utils/appointment-reminder-plan.ts"
+    ],
+    "Gihani": [
+      "src/app/student/mood/history.tsx",
+      "src/app/student/resources.tsx",
+      "src/app/student/resources/[id].tsx",
+      "src/app/student/resources/saved.tsx",
+      "src/components/gihani-ui.tsx",
+      "src/components/mood-log-card.tsx",
+      "src/components/mood-reflection-panel.tsx",
+      "src/components/resource-screens.tsx",
+      "src/constants/starter-resources.ts",
+      "src/services/gihani-session.ts",
+      "src/services/mood-reflections.ts",
+      "src/services/resources.ts",
+      "src/services/saved-resources.ts",
+      "src/utils/mood-rhythm.ts",
+      "src/utils/resource-search.ts",
+      "src/utils/saved-resource-errors.ts"
+    ],
+    "Kiyathan": [
+      "src/app/counselor/availability.tsx",
+      "src/app/counselor/availability/edit/[id].tsx",
+      "src/app/counselor/availability/new.tsx",
+      "src/app/counselor/profile.tsx",
+      "src/app/counselor/schedule.tsx",
+      "src/app/counselor/session/[id].tsx",
+      "src/app/counselor/sessions.tsx",
+      "src/app/counselor/support.tsx",
+      "src/components/availability-date-picker.native.tsx",
+      "src/components/availability-date-picker.tsx",
+      "src/components/availability-picker-ui.tsx",
+      "src/components/availability-time-picker.tsx",
+      "src/components/counselor-management-screens.tsx",
+      "src/hooks/use-counselor-schedule.ts",
+      "src/services/counselor-management.ts",
+      "src/utils/availability-form.ts"
+    ],
+    "Shared/Common": [
+      ".env.example",
+      ".gitignore",
+      ".vscode/extensions.json",
+      ".vscode/settings.json",
+      "AGENTS.md",
+      "LICENSE",
+      "README.md",
+      "app.json",
+      "assets/expo.icon/Assets/expo-symbol 2.svg",
+      "assets/expo.icon/Assets/grid.png",
+      "assets/expo.icon/icon.json",
+      "assets/images/android-icon-background.png",
+      "assets/images/android-icon-foreground.png",
+      "assets/images/android-icon-monochrome.png",
+      "assets/images/expo-badge-white.png",
+      "assets/images/expo-badge.png",
+      "assets/images/expo-logo.png",
+      "assets/images/favicon.png",
+      "assets/images/icon.png",
+      "assets/images/logo-glow.png",
+      "assets/images/react-logo.png",
+      "assets/images/react-logo@2x.png",
+      "assets/images/react-logo@3x.png",
+      "assets/images/splash-icon.png",
+      "assets/images/tabIcons/explore.png",
+      "assets/images/tabIcons/explore@2x.png",
+      "assets/images/tabIcons/explore@3x.png",
+      "assets/images/tabIcons/home.png",
+      "assets/images/tabIcons/home@2x.png",
+      "assets/images/tabIcons/home@3x.png",
+      "assets/images/tutorial-web.png",
+      "docs/anonymous-mode.md",
+      "docs/appointment-reminders.md",
+      "docs/azhmen-features.md",
+      "docs/counselor-dashboard.md",
+      "docs/counselor-profile.md",
+      "docs/final-verification.md",
+      "docs/functional-reliability-pass.md",
+      "docs/gihani-features.md",
+      "docs/kiyathan-features.md",
+      "docs/live-chat.md",
+      "docs/mood-ownership.md",
+      "docs/registration.md",
+      "docs/student-flow.md",
+      "docs/student-profile-support.md",
+      "docs/tharukanan-features.md",
+      "docs/ui-consistency.md",
+      "docs/ui-polish-report.md",
+      "eas.json",
+      "eslint.config.js",
+      "firebase.emulator.json",
+      "firestore.rules",
+      "package-lock.json",
+      "package.json",
+      "scripts/audit-visual-preservation.cjs",
+      "scripts/render-student-previews.cjs",
+      "scripts/run-rule-regressions.cjs",
+      "scripts/test-appointment-cancellation-ui.cjs",
+      "scripts/test-appointment-notifications.cjs",
+      "scripts/test-appointment-rules.cjs",
+      "scripts/test-appointments.cjs",
+      "scripts/test-availability-delete.cjs",
+      "scripts/test-counselor-profile-rules.cjs",
+      "scripts/test-counselor-profile-screen.cjs",
+      "scripts/test-counselor-profile.cjs",
+      "scripts/test-firestore-rules.cjs",
+      "scripts/test-gihani-rules.cjs",
+      "scripts/test-gihani-services.cjs",
+      "scripts/test-kiyathan-rules.cjs",
+      "scripts/test-kiyathan-services.cjs",
+      "scripts/test-mood-log-card.cjs",
+      "scripts/test-mood-rhythm-reflections.cjs",
+      "scripts/test-mood-rhythm.cjs",
+      "scripts/test-notification-preference-rules.cjs",
+      "scripts/test-registration-flow.cjs",
+      "scripts/test-registration-rules.cjs",
+      "scripts/test-reminder-crisis-ui.cjs",
+      "scripts/test-reminder-status-ui.cjs",
+      "scripts/test-reminders-and-crisis.cjs",
+      "scripts/test-saved-resource-flow.cjs",
+      "scripts/test-student-profile-screen.cjs",
+      "scripts/test-student-profile-support.cjs",
+      "scripts/test-student-services.cjs",
+      "scripts/test-temporary-feedback.cjs",
+      "src/app/_layout.tsx",
+      "src/app/counselor/_layout.tsx",
+      "src/app/index.tsx",
+      "src/app/login.tsx",
+      "src/app/register.tsx",
+      "src/app/student/privacy.tsx",
+      "src/app/student/support.tsx",
+      "src/components/app-card.tsx",
+      "src/components/app-text-input.tsx",
+      "src/components/auth-screen.tsx",
+      "src/components/care-icon.tsx",
+      "src/components/care-login-layout.tsx",
+      "src/components/counselor-ui.tsx",
+      "src/components/logout-button.tsx",
+      "src/components/presentation.tsx",
+      "src/components/primary-button.tsx",
+      "src/components/role-layout.tsx",
+      "src/components/screen-container.tsx",
+      "src/components/student-screen.tsx",
+      "src/components/student-ui.tsx",
+      "src/components/text.tsx",
+      "src/components/wellness-ui.tsx",
+      "src/config/auth-instance.native.ts",
+      "src/config/auth-instance.ts",
+      "src/config/firebase.ts",
+      "src/constants/border-radius.ts",
+      "src/constants/care-layout.ts",
+      "src/constants/colors.ts",
+      "src/constants/spacing.ts",
+      "src/constants/student-support.ts",
+      "src/constants/typography.ts",
+      "src/constants/ui.ts",
+      "src/hooks/use-temporary-feedback.ts",
+      "src/services/auth.ts",
+      "src/services/student-session.ts",
+      "src/utils/auth.ts",
+      "tsconfig.json"
+    ],
+    "Integration": [
+      "src/app/counselor/dashboard.tsx",
+      "src/app/student/_layout.tsx",
+      "src/app/student/home.tsx",
+      "src/app/student/profile.tsx",
+      "src/constants/booking.ts",
+      "src/services/user-profile.ts"
+    ]
+  },
+  "files": {
+    "01-Azhmen-first-upload": [
+      ".env.example",
+      ".gitignore",
+      ".vscode/extensions.json",
+      ".vscode/settings.json",
+      "AGENTS.md",
+      "LICENSE",
+      "README.md",
+      "app.json",
+      "assets/expo.icon/Assets/expo-symbol 2.svg",
+      "assets/expo.icon/Assets/grid.png",
+      "assets/expo.icon/icon.json",
+      "assets/images/android-icon-background.png",
+      "assets/images/android-icon-foreground.png",
+      "assets/images/android-icon-monochrome.png",
+      "assets/images/expo-badge-white.png",
+      "assets/images/expo-badge.png",
+      "assets/images/expo-logo.png",
+      "assets/images/favicon.png",
+      "assets/images/icon.png",
+      "assets/images/logo-glow.png",
+      "assets/images/react-logo.png",
+      "assets/images/react-logo@2x.png",
+      "assets/images/react-logo@3x.png",
+      "assets/images/splash-icon.png",
+      "assets/images/tabIcons/explore.png",
+      "assets/images/tabIcons/explore@2x.png",
+      "assets/images/tabIcons/explore@3x.png",
+      "assets/images/tabIcons/home.png",
+      "assets/images/tabIcons/home@2x.png",
+      "assets/images/tabIcons/home@3x.png",
+      "assets/images/tutorial-web.png",
+      "docs/anonymous-mode.md",
+      "docs/appointment-reminders.md",
+      "docs/azhmen-features.md",
+      "docs/counselor-dashboard.md",
+      "docs/counselor-profile.md",
+      "docs/final-verification.md",
+      "docs/functional-reliability-pass.md",
+      "docs/gihani-features.md",
+      "docs/kiyathan-features.md",
+      "docs/live-chat.md",
+      "docs/mood-ownership.md",
+      "docs/registration.md",
+      "docs/student-flow.md",
+      "docs/student-profile-support.md",
+      "docs/tharukanan-features.md",
+      "docs/ui-consistency.md",
+      "docs/ui-polish-report.md",
+      "eas.json",
+      "eslint.config.js",
+      "firebase.emulator.json",
+      "firestore.rules",
+      "package-lock.json",
+      "package.json",
+      "scripts/audit-visual-preservation.cjs",
+      "scripts/render-student-previews.cjs",
+      "scripts/run-rule-regressions.cjs",
+      "scripts/test-appointment-cancellation-ui.cjs",
+      "scripts/test-appointment-notifications.cjs",
+      "scripts/test-appointment-rules.cjs",
+      "scripts/test-appointments.cjs",
+      "scripts/test-availability-delete.cjs",
+      "scripts/test-counselor-profile-rules.cjs",
+      "scripts/test-counselor-profile-screen.cjs",
+      "scripts/test-counselor-profile.cjs",
+      "scripts/test-firestore-rules.cjs",
+      "scripts/test-gihani-rules.cjs",
+      "scripts/test-gihani-services.cjs",
+      "scripts/test-kiyathan-rules.cjs",
+      "scripts/test-kiyathan-services.cjs",
+      "scripts/test-mood-log-card.cjs",
+      "scripts/test-mood-rhythm-reflections.cjs",
+      "scripts/test-mood-rhythm.cjs",
+      "scripts/test-notification-preference-rules.cjs",
+      "scripts/test-registration-flow.cjs",
+      "scripts/test-registration-rules.cjs",
+      "scripts/test-reminder-crisis-ui.cjs",
+      "scripts/test-reminder-status-ui.cjs",
+      "scripts/test-reminders-and-crisis.cjs",
+      "scripts/test-saved-resource-flow.cjs",
+      "scripts/test-student-profile-screen.cjs",
+      "scripts/test-student-profile-support.cjs",
+      "scripts/test-student-services.cjs",
+      "scripts/test-temporary-feedback.cjs",
+      "src/app/_layout.tsx",
+      "src/app/anonymous/_layout.tsx",
+      "src/app/anonymous/chat.tsx",
+      "src/app/anonymous/crisis-support.tsx",
+      "src/app/anonymous/home.tsx",
+      "src/app/anonymous/mood.tsx",
+      "src/app/anonymous/mood/edit/[id].tsx",
+      "src/app/anonymous/mood/history.tsx",
+      "src/app/counselor/_layout.tsx",
+      "src/app/counselor/chat/[threadId].tsx",
+      "src/app/counselor/chats.tsx",
+      "src/app/counselor/crisis-support.tsx",
+      "src/app/counselor/dashboard.tsx",
+      "src/app/index.tsx",
+      "src/app/login.tsx",
+      "src/app/register.tsx",
+      "src/app/student/_layout.tsx",
+      "src/app/student/chat.tsx",
+      "src/app/student/crisis-support.tsx",
+      "src/app/student/home.tsx",
+      "src/app/student/mood/edit/[id].tsx",
+      "src/app/student/mood/index.tsx",
+      "src/app/student/privacy.tsx",
+      "src/app/student/profile.tsx",
+      "src/app/student/support.tsx",
+      "src/components/anonymous-exit-button.tsx",
+      "src/components/app-card.tsx",
+      "src/components/app-text-input.tsx",
+      "src/components/auth-screen.tsx",
+      "src/components/care-icon.tsx",
+      "src/components/care-login-layout.tsx",
+      "src/components/chat-ui.tsx",
+      "src/components/counselor-ui.tsx",
+      "src/components/crisis-support-content.tsx",
+      "src/components/live-chat-screen.tsx",
+      "src/components/logout-button.tsx",
+      "src/components/mood-form.tsx",
+      "src/components/mood-option-card.tsx",
+      "src/components/presentation.tsx",
+      "src/components/primary-button.tsx",
+      "src/components/role-layout.tsx",
+      "src/components/screen-container.tsx",
+      "src/components/student-live-support.tsx",
+      "src/components/student-screen.tsx",
+      "src/components/student-ui.tsx",
+      "src/components/text.tsx",
+      "src/components/wellness-ui.tsx",
+      "src/config/auth-instance.native.ts",
+      "src/config/auth-instance.ts",
+      "src/config/firebase.ts",
+      "src/constants/booking.ts",
+      "src/constants/border-radius.ts",
+      "src/constants/care-layout.ts",
+      "src/constants/colors.ts",
+      "src/constants/spacing.ts",
+      "src/constants/student-support.ts",
+      "src/constants/typography.ts",
+      "src/constants/ui.ts",
+      "src/hooks/use-counselor-threads.ts",
+      "src/hooks/use-temporary-feedback.ts",
+      "src/services/anonymous-chat.ts",
+      "src/services/anonymous-mood.ts",
+      "src/services/anonymous-session.ts",
+      "src/services/auth.ts",
+      "src/services/chat.ts",
+      "src/services/mood.ts",
+      "src/services/student-session.ts",
+      "src/services/user-profile.ts",
+      "src/utils/auth.ts",
+      "src/utils/crisis-cues.ts",
+      "tsconfig.json"
+    ],
+    "Tharukanan": [
+      "src/app/student/(booking)/_layout.tsx",
+      "src/app/student/(booking)/appointments.tsx",
+      "src/app/student/(booking)/appointments/book.tsx",
+      "src/app/student/(booking)/appointments/confirm.tsx",
+      "src/app/student/(booking)/appointments/edit/[id].tsx",
+      "src/app/student/(booking)/appointments/pre-session.tsx",
+      "src/app/student/(booking)/appointments/success.tsx",
+      "src/components/appointment-reminder-banner.tsx",
+      "src/components/appointment-reminder-provider.tsx",
+      "src/components/appointment-reminder-status.tsx",
+      "src/components/appointment-screens.tsx",
+      "src/components/appointment-ui.tsx",
+      "src/components/booking-draft.tsx",
+      "src/components/notification-preferences.tsx",
+      "src/services/appointment-reminders.ts",
+      "src/services/appointments.ts",
+      "src/services/pre-session-notes.ts",
+      "src/services/reminder-notifications.native.ts",
+      "src/services/reminder-notifications.ts",
+      "src/utils/appointment-reminder-plan.ts"
+    ],
+    "Gihani": [
+      "src/app/student/mood/history.tsx",
+      "src/app/student/resources.tsx",
+      "src/app/student/resources/[id].tsx",
+      "src/app/student/resources/saved.tsx",
+      "src/components/gihani-ui.tsx",
+      "src/components/mood-log-card.tsx",
+      "src/components/mood-reflection-panel.tsx",
+      "src/components/resource-screens.tsx",
+      "src/constants/starter-resources.ts",
+      "src/services/gihani-session.ts",
+      "src/services/mood-reflections.ts",
+      "src/services/resources.ts",
+      "src/services/saved-resources.ts",
+      "src/utils/mood-rhythm.ts",
+      "src/utils/resource-search.ts",
+      "src/utils/saved-resource-errors.ts"
+    ],
+    "Kiyathan": [
+      "src/app/counselor/availability.tsx",
+      "src/app/counselor/availability/edit/[id].tsx",
+      "src/app/counselor/availability/new.tsx",
+      "src/app/counselor/profile.tsx",
+      "src/app/counselor/schedule.tsx",
+      "src/app/counselor/session/[id].tsx",
+      "src/app/counselor/sessions.tsx",
+      "src/app/counselor/support.tsx",
+      "src/components/availability-date-picker.native.tsx",
+      "src/components/availability-date-picker.tsx",
+      "src/components/availability-picker-ui.tsx",
+      "src/components/availability-time-picker.tsx",
+      "src/components/counselor-management-screens.tsx",
+      "src/hooks/use-counselor-schedule.ts",
+      "src/services/counselor-management.ts",
+      "src/utils/availability-form.ts"
+    ]
+  },
+  "shared_source": [
+    "src/app/_layout.tsx",
+    "src/app/counselor/_layout.tsx",
+    "src/app/index.tsx",
+    "src/app/login.tsx",
+    "src/app/register.tsx",
+    "src/app/student/privacy.tsx",
+    "src/app/student/support.tsx",
+    "src/components/app-card.tsx",
+    "src/components/app-text-input.tsx",
+    "src/components/auth-screen.tsx",
+    "src/components/care-icon.tsx",
+    "src/components/care-login-layout.tsx",
+    "src/components/counselor-ui.tsx",
+    "src/components/logout-button.tsx",
+    "src/components/presentation.tsx",
+    "src/components/primary-button.tsx",
+    "src/components/role-layout.tsx",
+    "src/components/screen-container.tsx",
+    "src/components/student-screen.tsx",
+    "src/components/student-ui.tsx",
+    "src/components/text.tsx",
+    "src/components/wellness-ui.tsx",
+    "src/config/auth-instance.native.ts",
+    "src/config/auth-instance.ts",
+    "src/config/firebase.ts",
+    "src/constants/border-radius.ts",
+    "src/constants/care-layout.ts",
+    "src/constants/colors.ts",
+    "src/constants/spacing.ts",
+    "src/constants/student-support.ts",
+    "src/constants/typography.ts",
+    "src/constants/ui.ts",
+    "src/hooks/use-temporary-feedback.ts",
+    "src/services/auth.ts",
+    "src/services/student-session.ts",
+    "src/utils/auth.ts"
+  ],
+  "integration_reasons": {
+    "src/app/student/home.tsx": "Azhmen mood/support, Tharukanan reminders and appointments, Gihani resource navigation.",
+    "src/app/student/profile.tsx": "Shared identity/profile plus Tharukanan reminder preferences and other module links.",
+    "src/app/student/_layout.tsx": "Shared role shell mounts Tharukanan reminder provider.",
+    "src/app/counselor/dashboard.tsx": "Kiyathan dashboard/schedule presentation integrates Azhmen live-chat queue. Kiyathan is presentation steward; coordinate whole-file merges.",
+    "src/services/user-profile.ts": "Shared profile/auth data, counselor directory, and appointment-reminder preferences.",
+    "src/constants/booking.ts": "Booking date/topic utilities consumed by Tharukanan booking and Kiyathan availability."
+  },
+  "latest_reliability_files": {
+    "src/components/appointment-screens.tsx": "Tharukanan",
+    "src/components/resource-screens.tsx": "Gihani",
+    "src/components/counselor-management-screens.tsx": "Kiyathan",
+    "src/components/live-chat-screen.tsx": "Azhmen",
+    "src/components/mood-reflection-panel.tsx": "Gihani",
+    "src/components/mood-log-card.tsx": "Gihani",
+    "src/app/student/mood/history.tsx": "Gihani"
+  },
+  "cross_owner_imports": [
+    {
+      "file": "src/app/anonymous/_layout.tsx",
+      "owner": "Azhmen",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/_layout.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/screen-container.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/_layout.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/_layout.tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/home.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/home.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/home.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/home.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/home.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/home.tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/home.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/history.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/history.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/history.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/anonymous/mood/history.tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/chats.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/counselor-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/chats.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/chats.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/chats.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/chats.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/crisis-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/counselor-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/crisis-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/presentation.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/constants/typography.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/hooks/use-counselor-schedule.ts",
+      "dependency_owner": "Kiyathan"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/counselor-management-screens.tsx",
+      "dependency_owner": "Kiyathan"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/counselor-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/components/logout-button.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/services/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/hooks/use-counselor-threads.ts",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/dashboard.tsx",
+      "owner": "Integration",
+      "imports": "src/constants/border-radius.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/presentation.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/counselor-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/logout-button.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/profile.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/support.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/typography.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/support.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/counselor-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/support.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/support.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/support.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/support.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/counselor/support.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/login.tsx",
+      "owner": "Shared/Common",
+      "imports": "src/services/anonymous-session.ts",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/app/login.tsx",
+      "owner": "Shared/Common",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/app/register.tsx",
+      "owner": "Shared/Common",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/app/student/_layout.tsx",
+      "owner": "Integration",
+      "imports": "src/components/role-layout.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/_layout.tsx",
+      "owner": "Integration",
+      "imports": "src/components/appointment-reminder-provider.tsx",
+      "dependency_owner": "Tharukanan"
+    },
+    {
+      "file": "src/app/student/crisis-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/crisis-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/appointment-reminder-banner.tsx",
+      "dependency_owner": "Tharukanan"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/mood-option-card.tsx",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/components/logout-button.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/services/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/services/mood.ts",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/home.tsx",
+      "owner": "Integration",
+      "imports": "src/constants/border-radius.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/gihani-ui.tsx",
+      "dependency_owner": "Gihani"
+    },
+    {
+      "file": "src/app/student/mood/edit/[id].tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/mood-option-card.tsx",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/services/mood.ts",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/history.tsx",
+      "owner": "Gihani",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/index.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/index.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/mood/index.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/presentation.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/logout-button.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/services/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/app/student/profile.tsx",
+      "owner": "Integration",
+      "imports": "src/components/notification-preferences.tsx",
+      "dependency_owner": "Tharukanan"
+    },
+    {
+      "file": "src/components/anonymous-exit-button.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/anonymous-exit-button.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/anonymous-exit-button.tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-reminder-banner.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/hooks/use-temporary-feedback.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-reminder-banner.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-reminder-banner.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-reminder-provider.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-reminder-provider.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-reminder-status.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-reminder-status.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/presentation.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/services/counselor-management.ts",
+      "dependency_owner": "Kiyathan"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/services/student-session.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-screens.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/presentation.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/services/counselor-management.ts",
+      "dependency_owner": "Kiyathan"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/appointment-ui.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/constants/booking.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/availability-date-picker.native.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-date-picker.native.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-date-picker.native.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-date-picker.native.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/booking.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/availability-date-picker.native.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-date-picker.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-date-picker.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/booking.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/availability-date-picker.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-date-picker.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/typography.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-picker-ui.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-picker-ui.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/border-radius.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-time-picker.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-time-picker.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/availability-time-picker.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/care-login-layout.tsx",
+      "owner": "Shared/Common",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/chat-ui.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/chat-ui.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/chat-ui.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/chat-ui.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/chat-ui.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/border-radius.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/presentation.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/counselor-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/components/appointment-ui.tsx",
+      "dependency_owner": "Tharukanan"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/constants/booking.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/services/appointments.ts",
+      "dependency_owner": "Tharukanan"
+    },
+    {
+      "file": "src/components/counselor-management-screens.tsx",
+      "owner": "Kiyathan",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/crisis-support-content.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/crisis-support-content.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/crisis-support-content.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/crisis-support-content.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/gihani-ui.tsx",
+      "owner": "Gihani",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/gihani-ui.tsx",
+      "owner": "Gihani",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/services/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/live-chat-screen.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-form.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/border-radius.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-log-card.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-log-card.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-log-card.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/mood-option-card.tsx",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/components/mood-log-card.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-log-card.tsx",
+      "owner": "Gihani",
+      "imports": "src/services/mood.ts",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/components/mood-log-card.tsx",
+      "owner": "Gihani",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-option-card.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-option-card.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-option-card.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-option-card.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/border-radius.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-reflection-panel.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-reflection-panel.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-reflection-panel.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-reflection-panel.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-reflection-panel.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/mood-reflection-panel.tsx",
+      "owner": "Gihani",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/notification-preferences.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/notification-preferences.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/notification-preferences.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/notification-preferences.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/notification-preferences.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/notification-preferences.tsx",
+      "owner": "Tharukanan",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/wellness-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/app-text-input.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/resource-screens.tsx",
+      "owner": "Gihani",
+      "imports": "src/services/student-session.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/role-layout.tsx",
+      "owner": "Shared/Common",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/components/student-live-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/presentation.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/student-live-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/care-icon.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/student-live-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/text.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/student-live-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-screen.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/student-live-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/components/student-ui.tsx",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/student-live-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/components/student-live-support.tsx",
+      "owner": "Azhmen",
+      "imports": "src/constants/colors.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/hooks/use-counselor-schedule.ts",
+      "owner": "Kiyathan",
+      "imports": "src/services/appointments.ts",
+      "dependency_owner": "Tharukanan"
+    },
+    {
+      "file": "src/hooks/use-counselor-schedule.ts",
+      "owner": "Kiyathan",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/hooks/use-counselor-threads.ts",
+      "owner": "Azhmen",
+      "imports": "src/services/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/hooks/use-counselor-threads.ts",
+      "owner": "Azhmen",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/anonymous-chat.ts",
+      "owner": "Azhmen",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/anonymous-chat.ts",
+      "owner": "Azhmen",
+      "imports": "src/services/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/anonymous-chat.ts",
+      "owner": "Azhmen",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/services/anonymous-mood.ts",
+      "owner": "Azhmen",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/anonymous-session.ts",
+      "owner": "Azhmen",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/appointment-reminders.ts",
+      "owner": "Tharukanan",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/appointment-reminders.ts",
+      "owner": "Tharukanan",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/services/appointments.ts",
+      "owner": "Tharukanan",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/appointments.ts",
+      "owner": "Tharukanan",
+      "imports": "src/services/student-session.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/appointments.ts",
+      "owner": "Tharukanan",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/services/chat.ts",
+      "owner": "Azhmen",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/chat.ts",
+      "owner": "Azhmen",
+      "imports": "src/services/student-session.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/chat.ts",
+      "owner": "Azhmen",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/services/counselor-management.ts",
+      "owner": "Kiyathan",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/counselor-management.ts",
+      "owner": "Kiyathan",
+      "imports": "src/services/student-session.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/counselor-management.ts",
+      "owner": "Kiyathan",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/services/counselor-management.ts",
+      "owner": "Kiyathan",
+      "imports": "src/services/appointments.ts",
+      "dependency_owner": "Tharukanan"
+    },
+    {
+      "file": "src/services/gihani-session.ts",
+      "owner": "Gihani",
+      "imports": "src/services/auth.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/gihani-session.ts",
+      "owner": "Gihani",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/services/mood-reflections.ts",
+      "owner": "Gihani",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/mood.ts",
+      "owner": "Azhmen",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/mood.ts",
+      "owner": "Azhmen",
+      "imports": "src/services/student-session.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/pre-session-notes.ts",
+      "owner": "Tharukanan",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/resources.ts",
+      "owner": "Gihani",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/saved-resources.ts",
+      "owner": "Gihani",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/services/user-profile.ts",
+      "owner": "Integration",
+      "imports": "src/config/firebase.ts",
+      "dependency_owner": "Shared/Common"
+    },
+    {
+      "file": "src/utils/auth.ts",
+      "owner": "Shared/Common",
+      "imports": "src/services/user-profile.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/utils/availability-form.ts",
+      "owner": "Kiyathan",
+      "imports": "src/constants/booking.ts",
+      "dependency_owner": "Integration"
+    },
+    {
+      "file": "src/utils/mood-rhythm.ts",
+      "owner": "Gihani",
+      "imports": "src/services/mood.ts",
+      "dependency_owner": "Azhmen"
+    },
+    {
+      "file": "src/utils/saved-resource-errors.ts",
+      "owner": "Gihani",
+      "imports": "src/utils/auth.ts",
+      "dependency_owner": "Shared/Common"
+    }
+  ],
+  "legacy_retained_copies_not_for_upload": {
+    "01-Azhmen-first-upload": [],
+    "Tharukanan": [],
+    "Gihani": [],
+    "Kiyathan": []
+  },
+  "source_sha256": {
+    ".env.example": "70f752894c9d1abaf799cb78eedc913b76c7e11e26b4b0ab59643b6de695d988",
+    ".gitignore": "96aa02a65a1a71ce01da71726b064ce1794d9b113691a03db291c146d5ac3f51",
+    ".vscode/extensions.json": "f54cd822dce0af53953015f71ce04f91d4fcec4ac02ecb28658d636004c4bbce",
+    ".vscode/settings.json": "0f934ddb9e8c5b95b57edcdd4f774b5eec5e3340efad9addda7cb67a7af349d6",
+    "AGENTS.md": "4fd0da1e1b5dffc73e4e1cec02b9063a271a94b9995c362b9012ca7b57f50c62",
+    "LICENSE": "fb3ca4a837f5779e83cef89b78253a8949cfb9429c340309f62d0465ec6610b4",
+    "README.md": "74b618a1f50d84732c72cc92a49cdebafc3e40d54d9ba63523d80955abafc379",
+    "app.json": "d539517e1691ec17da69cf460d22c102d15198f7e0cce1997731dac6e3449b7c",
+    "assets/expo.icon/Assets/expo-symbol 2.svg": "ad117d20fd819f4ec71876ce09c0e8b9275b1f20c5ec3c9d7d1914977ceffec6",
+    "assets/expo.icon/Assets/grid.png": "8247d79a2b31328fe4e330a973e6fae16924ed9aebd72c64d464d6856ab18c72",
+    "assets/expo.icon/icon.json": "747c56e178222a6255c6dd61c5de011b286cdc935febe89f04d1b191c3d076fe",
+    "assets/images/android-icon-background.png": "fb139c2dee362ebf2070e23b96da6fc0d43f8492de38b8af1fd7223e19b5861d",
+    "assets/images/android-icon-foreground.png": "9e3d0315a33c6799de601dd34cd8bf8cc3a8d16f3bf75592baec2ceb7240b391",
+    "assets/images/android-icon-monochrome.png": "6371fc2c12e33ad2215a86c281db3d682a81bebe7c957a842c13b8bf00cceb83",
+    "assets/images/expo-badge-white.png": "d9ba28c5e93aea3c2dabd901ee96fea3bb296ad8e648f6f64706dae11a1a62bd",
+    "assets/images/expo-badge.png": "ff353c7efadbd379903923cb604fca11c908cba0d4658cc2bd1f147d98317249",
+    "assets/images/expo-logo.png": "27b060a757a29038c9618586baa0ba3894dbe60d084c6059df497ff429c2d92f",
+    "assets/images/favicon.png": "a4e030697a7571b3e95d31860e4da55d2f98e5e861e2b55e414f45a8556828ba",
+    "assets/images/icon.png": "7a667804bb80a6a424a5daf18a2599c4f32237cf06fe78fc0de45dbb09e0eccf",
+    "assets/images/logo-glow.png": "bbd98a3f3c12d090f4df6065b7462fcdf6bc266209d002b4ef5fe554c245f66c",
+    "assets/images/react-logo.png": "224b7636b15e672801579b5b418077cbc2ca42f0146389062364356b0ecb5c5c",
+    "assets/images/react-logo@2x.png": "fa600be9ad2f869c7a8dbaffc78bb15af741123e1319c948f0be51753a153cde",
+    "assets/images/react-logo@3x.png": "cd84e02a5d542a3e71b7fa10a685c1b9fb51db4aff92aca6c0da6461ce17be16",
+    "assets/images/splash-icon.png": "27b060a757a29038c9618586baa0ba3894dbe60d084c6059df497ff429c2d92f",
+    "assets/images/tabIcons/explore.png": "e2dea1c2d20929d83e8eebd74818e808b1b72e376d3a1f3a03679fff0255d073",
+    "assets/images/tabIcons/explore@2x.png": "1b54913b3a0acc3e1fb72d3b9b79ad04814304b35bbb9d03a533e6130ad6c26a",
+    "assets/images/tabIcons/explore@3x.png": "2f3e43801df70ebe83273b90a7d170bacf5ca74a8a8dc5c154a020c2c8b06609",
+    "assets/images/tabIcons/home.png": "3829632ec7d495225395f5da3d0942935d7d055979b174613d1ade82fe420e76",
+    "assets/images/tabIcons/home@2x.png": "21c5a07df9017d97464a0a8256e265288f2fca0741ca651de05e12b32f32f5ab",
+    "assets/images/tabIcons/home@3x.png": "fe5b397975e7cb70ae7a122472d174ed12ec2ae106f7b49c968225ad37f8b3b8",
+    "assets/images/tutorial-web.png": "e372ec23ad6262e2e0dc2799ce416b495a631a565bcd24f0615d4afc04dac3bd",
+    "docs/anonymous-mode.md": "2ae6a6bc36a42ffe121c85970e0eec94de3cd50ac014c02b6a20d6d3af624db3",
+    "docs/appointment-reminders.md": "0ea5093287fc5533fd605203fe56a81f3bf52becc1f300b9e2daaedacdb7024b",
+    "docs/azhmen-features.md": "460a6b2c265530cb70ee3a76841f8da4e603ff48f56f8c13043358ab7334cc5f",
+    "docs/counselor-dashboard.md": "b76851ef4b2046da0cc1607e97b6ab2731858d101ef92dafec2478797d1e0ff3",
+    "docs/counselor-profile.md": "c442ec527ccde009d7fa02331aea2fed5e7222e406f60b2d147e24071f526c17",
+    "docs/final-verification.md": "4d1f65756e375d4c0b26cb9e1ca3b87d9ec56ae11db08771abb4a0c33a1a6cb2",
+    "docs/functional-reliability-pass.md": "4ab40167dc4e1c63bd762f87adab1c510abdeae888735c450904c66fcdad472c",
+    "docs/gihani-features.md": "945bd45fbfcb3f61333155bc9fb5b01179f13faa08ee047742eda44912d7f6ee",
+    "docs/kiyathan-features.md": "67bbb680694561d6517943631b7108337f052e2e42e69efa68b31aec3fd57dc6",
+    "docs/live-chat.md": "58086cbd17c7bcdda65ab8d93bb3a56e63edac8389100adfeca05acad6b4afbd",
+    "docs/mood-ownership.md": "9eef18565e9f90e385a39fa7311b20b0175a56e73cf7971322446321897e8935",
+    "docs/registration.md": "2e9062ddad151e92456b5baaf25de42360033e481511ce6dfe503139dcd1dba4",
+    "docs/student-flow.md": "5d246136d0e874ec96948f0cf026d249b76f2dfe4095b2a3b0823666c94b9a65",
+    "docs/student-profile-support.md": "5b7aa608419fd3f3246b84db57f5662df2ea066a15a2150b60802e98bcabf050",
+    "docs/tharukanan-features.md": "75b69f28e10b77ae8990af9ed8f8b876cb87901f76155ab65f684e00db073030",
+    "docs/ui-consistency.md": "44a1c38258011ac90e4fd448926e52fe41834d24c6b920d181cf24d8c24b4428",
+    "docs/ui-polish-report.md": "edd386c997ed3095077f69593c2fb68aeb82fe27bbbb4365c265fb022e5f81a8",
+    "eas.json": "8c792e60d08572abdb3ba2b0827bda853930ee54a912f8b13fd53090f3f6a51e",
+    "eslint.config.js": "6ea734f0e3f5b7c3c5720b3c467695516b14935724a78386b8534abc2959da12",
+    "firebase.emulator.json": "881c7e1be7fdf731cc36983cefa847d2d53b9e1a3c01c15043d236adb9f0bb52",
+    "firestore.rules": "024227308d58e6d8066176b72d78082ae7369d7a139235a50e6dfe821e166ef1",
+    "package-lock.json": "ee5e0473e84c311e0b6f4beceaa45fbf51ecb123c031b85b888c9e25ebc6e58c",
+    "package.json": "00cfd3c8432fddf8624c6b90e13710e325888da54bb065fb0b4a36d144ba34e5",
+    "scripts/audit-visual-preservation.cjs": "47bcb35d57b9ec0d27d106e17e68abac2a9640c47d78bd5cdeb84f37595faf25",
+    "scripts/render-student-previews.cjs": "83fb1716a2c845ee6c76e1437348cf93f251bae68cc7f447fe4344ebcfc37783",
+    "scripts/run-rule-regressions.cjs": "6ad7c16d487f3e0587ee9f5ba8301ce4eae564b9edff3d868d6080bbfcf8b1cd",
+    "scripts/test-appointment-cancellation-ui.cjs": "690cc8e63bbdb8687bffa8ef7711636bc1c0538d6c2f75e48bdc4525dbfaca28",
+    "scripts/test-appointment-notifications.cjs": "f5cae794c2e4d67851b8fae9693c637342a735748868f2f5ff5a17af7916e635",
+    "scripts/test-appointment-rules.cjs": "499099f1852d68dd6dd0dcccfad210a6a06cebceb9f739306054bdd7710d1879",
+    "scripts/test-appointments.cjs": "07604f203065bf8723bd4e0c6fbe076d9c7e1b0dda75b48dfa4797aa625f5806",
+    "scripts/test-availability-delete.cjs": "3bc0776220909028cc26ace1e58dc8fa390d52196f74ba74b9a57ecf815073d9",
+    "scripts/test-counselor-profile-rules.cjs": "0335111decfd3b62e8f7257ee2388898128963d0dbc2c6a6c63d39f55cf8e88e",
+    "scripts/test-counselor-profile-screen.cjs": "82a55b5496e7d32392fac85d69e6a2cc52027011eea44d11f4097c38883eab5a",
+    "scripts/test-counselor-profile.cjs": "fceee4280d827483bc4d9544062ef86f193965d4fe202d17081ff48e617182f2",
+    "scripts/test-firestore-rules.cjs": "90a86f54a4a88d2e8cfb30b964725c9ee774c63f330c913e8e5ae1d22c3774e2",
+    "scripts/test-gihani-rules.cjs": "1b1b9d09b09dff33e0f007082f80d543cbe7db6fbdca6e9dfa52dcd8f4c91606",
+    "scripts/test-gihani-services.cjs": "30dd4201195a8c1f43c3fc881ade638a7b7491d090cb8e826bc635b407a9503d",
+    "scripts/test-kiyathan-rules.cjs": "8bc8c3bce6dd635b3119dd223c65a2be9467f2b18a5bf5dd0e25b4fa4b6f14cc",
+    "scripts/test-kiyathan-services.cjs": "785cf284057e0b03421d0b6530c152ea3bd1eb142631063d27bd967ee1813352",
+    "scripts/test-mood-log-card.cjs": "a5b406c7c6042384ee78bbe8790fa9bad58801f3e9825dc07d8161e3efc5dd65",
+    "scripts/test-mood-rhythm-reflections.cjs": "5db7765257ed37f62caa1980c672e7709f27391ff8d607bbd4e1357799c76add",
+    "scripts/test-mood-rhythm.cjs": "04c03772fda017bfd2d63e9c78ee142f9a8889bdb9f063de2ea7e2882c56f1e0",
+    "scripts/test-notification-preference-rules.cjs": "ec785e25bf819960818dfad5e3d1531e28722a47aec794b3f8332e8a89ed91fc",
+    "scripts/test-registration-flow.cjs": "4d73058a04b787f5745c2d6c8784c28289cba2015baf79c22ea621d21763b7d9",
+    "scripts/test-registration-rules.cjs": "86d185c62a3c0883f3960558abbd9cca0844717c342ce6ae305adf536650d983",
+    "scripts/test-reminder-crisis-ui.cjs": "26ea72a4c465b075fabaa1ed5d610177edf46a166e4a516a09d2282cd469ca45",
+    "scripts/test-reminder-status-ui.cjs": "dc6c2a2b4f7fbe706e6586335a2fc661e4d2b131f619ad9e27b57a8de05e1f7e",
+    "scripts/test-reminders-and-crisis.cjs": "c35e2d995dbdfce51cd86295905c4e327fd185c4a4614ff6b2b5a4d6e0445811",
+    "scripts/test-saved-resource-flow.cjs": "a40121e806b0c3af3eda1249eda5e2fd49600c59dd8bc9e300d025cc0dc7e386",
+    "scripts/test-student-profile-screen.cjs": "811d28fb8da6a5fd18e0dcd61e94fb9459119f77db7d453c37c08aaf58bf6877",
+    "scripts/test-student-profile-support.cjs": "f49e8f440ffb80a61d394a06c123a8cd6a272d08b9e3c88a271001bf7945c519",
+    "scripts/test-student-services.cjs": "07479792a2f57239f35ed7f4e34922c4ec5c6ca33b9cb8d06131dbc20985ae41",
+    "scripts/test-temporary-feedback.cjs": "b081f81d034ab1d12890e931be8828b106445ea54aeeb6df0946efa6eb030e67",
+    "src/app/_layout.tsx": "217526759fbff518b5f9a3d38b63331a3dff7a8c7fdf4a89af59362d51212257",
+    "src/app/anonymous/_layout.tsx": "91037e49e0434b86f5bcce26ca7a4b258741d75839bbf87dc37e47f0788f9ce7",
+    "src/app/anonymous/chat.tsx": "d382341c095b3d3d715bd5573872d91d04c85dc0239ced4edf1768aa15f663a4",
+    "src/app/anonymous/crisis-support.tsx": "fc1c87664f274815e8477a9c1b90f088316b0bad79671fcffc44356ae57748c5",
+    "src/app/anonymous/home.tsx": "2776ae2b337b90cea986c083daf648af01d89d86c61e9d3bdd05c9fca80acd55",
+    "src/app/anonymous/mood.tsx": "6a82bd2e0dcdcfe06b3bc57bbfdb707d35218c4901c69b0e0f801b4a7376ffff",
+    "src/app/anonymous/mood/edit/[id].tsx": "9864b9e12f6f7fdc6c5ab1cc93b85e3f176fd84fd887f10977cb63758169be16",
+    "src/app/anonymous/mood/history.tsx": "666a6cdf54cef388e099d21d6650323a68d5a5ed9cccb692529843e7914e94a1",
+    "src/app/counselor/_layout.tsx": "2c6f8f45492a1e7eb9036b9f891dbe6872cc3fa852b23e54d426b8177f111e3b",
+    "src/app/counselor/availability.tsx": "1776fa73b25867a40f0a6a9c5ff61da68d0686b90bacd2081eff6926f099d9b8",
+    "src/app/counselor/availability/edit/[id].tsx": "c2f51e066b36750b52e4f76f1c4d9fec8e14da7653900c980f3217616c0f970b",
+    "src/app/counselor/availability/new.tsx": "10e773aabb947d91c4cf839c2ed78e564884f4fb8088514fd4ed3649e1c6a0af",
+    "src/app/counselor/chat/[threadId].tsx": "03077bd3829f83fa470a410e27e1a322943e54bbfca4ff458a8fa175eeb8019e",
+    "src/app/counselor/chats.tsx": "e44dc5e3e5bdf21807908c626084374fef897cc85df19d0971b2d43da72637dd",
+    "src/app/counselor/crisis-support.tsx": "95c45e06a755595bab3c880a6f2ff5c6eb28a4dc92862b9d55a9fd96caf4c086",
+    "src/app/counselor/dashboard.tsx": "b60d41f095bb9187b9150ea5013d98e77c12c2854f685035b15ab9efb765288e",
+    "src/app/counselor/profile.tsx": "d9d690817902e8c4b63c1be6abd1712e21e2352305927ee66fa8106ba3e92749",
+    "src/app/counselor/schedule.tsx": "3a67f0c36e9c095f37c9033d7405fbe7d1f5e1108c62a113fb1baaae2775c4e5",
+    "src/app/counselor/session/[id].tsx": "d5937fe1bf92dfd934196eadf6537fbf63eb78d33b56d9bf50b10f8e29d656ef",
+    "src/app/counselor/sessions.tsx": "f4fed017f2134eba3f41507fbc6a1efa7e4a421f7af09e1c05e858a3d97c03f4",
+    "src/app/counselor/support.tsx": "c80a543ec468e2accb2729d71c2c3fa31ec110d1ebec0d7501c41f8247443975",
+    "src/app/index.tsx": "68ea2798077b40c474e9d067f243edb230ca3c09e9473f85655a610ed39f50c2",
+    "src/app/login.tsx": "953d5fa1df2f92321cbd1a0639bd2a0a0cf6e1cc56659b8eda4323ca6b67beac",
+    "src/app/register.tsx": "b14432ed18e20fb8048cd4e5e9a57062ac3f85d17a188027ac30f8c68adb0228",
+    "src/app/student/(booking)/_layout.tsx": "6dd378b625f05cfadf9588590d912361ff7cce43b7092275bb2abe3855b030c7",
+    "src/app/student/(booking)/appointments.tsx": "c9c4e6aa43e8b7384e1d735db80a0ea2a8deb2503b4d8c4898f4ff7e2b0e1f72",
+    "src/app/student/(booking)/appointments/book.tsx": "2506da9386c76e12ba9170ffa061078048a40b0395498137c9f01d76ea9b5b08",
+    "src/app/student/(booking)/appointments/confirm.tsx": "74ad51017e8c45896401c2d8372f8d39ad0630ed34a761d6205cdfaf818d6b5f",
+    "src/app/student/(booking)/appointments/edit/[id].tsx": "893ef3cb425c54bdbe8ddf285011e26a0f2ad27f39e384222d3b0cc7a8f29b9a",
+    "src/app/student/(booking)/appointments/pre-session.tsx": "28006160e3217b3f4d49d573ce240a4e2c37ad0e699ad1d87ad9b514e5ad84d7",
+    "src/app/student/(booking)/appointments/success.tsx": "8010e27871dca974a2316450f353f9d13c5d4c2d35946556c84101408d940e54",
+    "src/app/student/_layout.tsx": "40d87e56593367b6f62f4c673c03b19652fd561c37b3fdaab93d9c7449d4692e",
+    "src/app/student/chat.tsx": "ae395db8ee64eda3bb0662a4755d3db0741d81ef0c6af203835c20b093c8bd8e",
+    "src/app/student/crisis-support.tsx": "777ca1b0b68170bcbd4a06904bea38468dd3067b7f9db82a7209c6b761a558be",
+    "src/app/student/home.tsx": "469a5f7c0f5f09997e1620d67f06a6ae61f36dd86bae2792b7cbf5bbc9f24350",
+    "src/app/student/mood/edit/[id].tsx": "ce05dc06f350600befbc972d8e799095c3b4a9415e265622fe2d12dbd6b5a4e6",
+    "src/app/student/mood/history.tsx": "3a8fbf37bf8f8e68b0bf7638690c0caba5cb7f1ba1d717b9ebda4c050d408b6c",
+    "src/app/student/mood/index.tsx": "30ab83ceb43f7b8176446230ccd59ba07da87f16a2d8a7acac8282f27f137e06",
+    "src/app/student/privacy.tsx": "23814cc6e8e5f5834438d1c783686e549bebb1c3cc0123c7c351b09346272ef7",
+    "src/app/student/profile.tsx": "c3d39a6252f847386d0fa923227ba7b3969b9001ff813a9f97895d8c007d7653",
+    "src/app/student/resources.tsx": "25fb809763c60f4f1b99e70a57c72a459ead2c54608d4a45fb4ef86ce8797099",
+    "src/app/student/resources/[id].tsx": "01de80a026569e09a64f5b1d5a6e0a0a38ee869622f5d6db17f1b2212f7bcaac",
+    "src/app/student/resources/saved.tsx": "10ee20316dee3d2949c837e2f9264bcda89b914d02c69175effd8e36d456719c",
+    "src/app/student/support.tsx": "a4b789d81de911a2faf096b49f880b452f7a1c4f613119cedb8cef2e804fa6d8",
+    "src/components/anonymous-exit-button.tsx": "b1ad64311ccfc61e3f82060e21551368426f75d85925a09177bf98f9aa91d70e",
+    "src/components/app-card.tsx": "eb162ecd7e40e58d4a402f0e364dc488d4c3419aef328b128082228addf088bc",
+    "src/components/app-text-input.tsx": "2d67a6891f9751c1100565fd346d1b2b6ab98af92d9092cdd87973c46b1d4b15",
+    "src/components/appointment-reminder-banner.tsx": "57ab1eacf1c4ae36bbd6d3fc1e1253fd0fd3e5547594b73c5a97b6644e1f6d18",
+    "src/components/appointment-reminder-provider.tsx": "f878e22e79345fc4e79c3d320dfb5ad03c574f4fdcb95e9b022f605e5b5c2b17",
+    "src/components/appointment-reminder-status.tsx": "e5dde1b7da972fcce419c7088a2e529ad8abd4473e40910c9adf0ed2d6358197",
+    "src/components/appointment-screens.tsx": "0ea88dfad5dbb3187442708a1029f8ad1a4156da4161e32381e2e018168f0953",
+    "src/components/appointment-ui.tsx": "53a85e322107fc195c8e9f878ea6507c16a85d14309669f91e75adbfc0ff092e",
+    "src/components/auth-screen.tsx": "b9cf501cbfb10c5ce6907bdd03f9778fb7904932c6360c31c448c4894578ecef",
+    "src/components/availability-date-picker.native.tsx": "d69c5cad53c883e6f1fb151cf289f8921c3b7820d11ccd7600297cf0b069c77c",
+    "src/components/availability-date-picker.tsx": "f51da76ea57dfae088d45aecec225fd630da8ea904c9ab67e86d3ab24168728c",
+    "src/components/availability-picker-ui.tsx": "ce4378197650c60bbce0ac71efa313b12214e67a85e376110d13cc331ceb26be",
+    "src/components/availability-time-picker.tsx": "016a38edcdf10922f4c396b4762bf78b0d92af3c7d0b86201191394486241c72",
+    "src/components/booking-draft.tsx": "a6dfc2a305d0f71a59dfc3fdd55a88f61aeff14ad3490995abfe4de2748d7f8f",
+    "src/components/care-icon.tsx": "ae0b1497857508ee7382371a5be93e814cbbfe494dc267546367531ca2385311",
+    "src/components/care-login-layout.tsx": "38842e775be2ffc779f44a871d294fa071cbc070106415054d949dfe664efdff",
+    "src/components/chat-ui.tsx": "464961ccc3b34c6fc4ebd3f4e81ef75b05fc069b36c25bc1b8c020a15d767df4",
+    "src/components/counselor-management-screens.tsx": "fb0617126d9129854cd69d78411b26ed35fa44ade6a5f6ef208d78af2cec8595",
+    "src/components/counselor-ui.tsx": "14dd2ef76a76b77cd594494b1aab1aea92841784fe623994b0261dcebf1a9691",
+    "src/components/crisis-support-content.tsx": "f41ba7f305f1225e8f6fa336e8e0031cce9c2d62794e8efd01c720ed4e5eb9e1",
+    "src/components/gihani-ui.tsx": "78a67c5df7a0c895f2dcf4e8fe0a0674bdebfe88c811dc285a754bd9a6c89835",
+    "src/components/live-chat-screen.tsx": "d4be456872f040d7e4933d97521f86c61ace9bf7a679be61036c839d95c2d880",
+    "src/components/logout-button.tsx": "b50d0eda2c88d21818d9cb2501b6aa49c49ee4896923ff9e153212968b73dabe",
+    "src/components/mood-form.tsx": "f52893b5a22796c4809432780c4f8af4b08b8fd9a3c4005d1f1678fa5900e12b",
+    "src/components/mood-log-card.tsx": "d81ad6bb2f2066b499406bb48b10d910832487388f5ac689d733067eed270dd1",
+    "src/components/mood-option-card.tsx": "229d86ecb643edf2412510c9821d41745f1eb1f2874ab7ebd52223bdbc048415",
+    "src/components/mood-reflection-panel.tsx": "47c6ef454de4ae7c347d4cea9db6ad563b6b6edfc1f692783495a7f809da685e",
+    "src/components/notification-preferences.tsx": "405f95890b5443f606aa52988bab84d7fa65f6ba730337c4e5effe404f99540a",
+    "src/components/presentation.tsx": "bfb599a2822b7c2925fb51cd7346cc864571490f2e0fd59dee2e721eca87a1d4",
+    "src/components/primary-button.tsx": "7dccd5de5e08c8a2fc4f859eb48eef2dba39b3b8b10ae8f411e8762a9384da0e",
+    "src/components/resource-screens.tsx": "4660a092aec8114f097a9f1926ce83aa765bd9cec566e4e8cae452ec97914a74",
+    "src/components/role-layout.tsx": "5af5fa7eaa6c4920b871734905a8c4d962ebffb23a7121acd766c86c78d11942",
+    "src/components/screen-container.tsx": "ad0b2d8c6cd2bf986f20858adc2395a9e4ebfaf0f93e3aef3b95127357429b7f",
+    "src/components/student-live-support.tsx": "ccb638132204f2440952c49b28b5bc2bb28944d9edfea72dd6bcc2edaab730d3",
+    "src/components/student-screen.tsx": "50e9a7c7cf92338eefd3fca9b0a64200cbf2ac7494fa663eab657c6268f797e6",
+    "src/components/student-ui.tsx": "3e4d92b8822455c2005a2b341bab98a650e4269003eb5f1e474397baf3e71500",
+    "src/components/text.tsx": "6a33b1aafa61f95abbbfbf146c18dd61d7b9dc9a4250476c339938d74061edf3",
+    "src/components/wellness-ui.tsx": "bf04231898a0a4ef82fca4af1403a6cd6d51eacbdcc0a789bff4c78de8ced7bf",
+    "src/config/auth-instance.native.ts": "04f63a41d30b42ed30f8daf7517dfbdce05917392c6cf2a7bc55efa1ce132afe",
+    "src/config/auth-instance.ts": "eee5d85bedeb1012404faee8692f39b0ae6861b260725e776f7a0b5ee1ade4ff",
+    "src/config/firebase.ts": "9f3b491fc13b7ad20976a9b1755aa7e674b9fbcdf8f07b330c0a35841fbb2bf9",
+    "src/constants/booking.ts": "cc61592b26d8f1815956a0b3d3a20c0a1052238ce9db1dc7b69f34cc7c4a6e95",
+    "src/constants/border-radius.ts": "2f8af4a9d13200491317bb540271ed974b8a602cea876e7237849554113f1aea",
+    "src/constants/care-layout.ts": "0c0a701c33ae2c4a561a13b4bae56be857fa979c62780f32671e63bcc8b54fcb",
+    "src/constants/colors.ts": "74d921a44daa96b33481df6ec9b1d38da3a3ff4ece16aeb9284eb4838f7fa5f6",
+    "src/constants/spacing.ts": "ff2953fbd9e2e06a6b4552fe82b5ffada749046d0ad33a34b08a419e04b76c3f",
+    "src/constants/starter-resources.ts": "b273c5253df7fb902e07e95c50921078997fe5d7ac20a9252ea0829d18d33822",
+    "src/constants/student-support.ts": "8b24a1ada9aeba659a5c12b52002a3492c5ed5fd873cbd9a2ab70048c630b2e0",
+    "src/constants/typography.ts": "10e08b78ae9ba396ad0d3cd9bc34cdbea5d350bdaae5930f721a2b26c7b574c1",
+    "src/constants/ui.ts": "4d16a034f5ee26d1d27df676ccae0ac9b0c185a3f19bea9c3685c8ef936441f0",
+    "src/hooks/use-counselor-schedule.ts": "3079af2bdac8fff6f1ef945b126f06e911d0bb112176e5b925cf61591d1d931a",
+    "src/hooks/use-counselor-threads.ts": "bced45cd030c0825d2aaa977149abaa7637326bb54077e72dde892030ec158c1",
+    "src/hooks/use-temporary-feedback.ts": "5420f44e4daa5011bd8e6a76358c6ad6282d847d20fafdfbd1a3e4f09777751a",
+    "src/services/anonymous-chat.ts": "bad5e5a805625bb4bdfa3b17b7c39de72bb3d99781b4441d3a2f415989770a84",
+    "src/services/anonymous-mood.ts": "d1019c1d78e108ee5f408063b8895346ab0be63444b008cda36f9d4792b2309e",
+    "src/services/anonymous-session.ts": "6003b6a7c7bbbceb0c8fd8be110a91e3f6c398d2032afc9354185b092a37d69f",
+    "src/services/appointment-reminders.ts": "22f02fdf10998c5b1d9bc3eb8d6a1f4bb43a758c545b70de6fd9936fbd75a73a",
+    "src/services/appointments.ts": "dc59d5748487b14d5a3521419db955880b3315f1d386b2112678b641558da2ef",
+    "src/services/auth.ts": "b4ede7b2a36d404e7edf8a5f0df28fe426c0cd1448d850b515dd51e966536763",
+    "src/services/chat.ts": "af56c50c87cdc73222662f35dec7106579f8d9e66bd2d098a8b7287d8191cf73",
+    "src/services/counselor-management.ts": "36da45e5b8a9e7b52899a837d88d5749de78ad8cf0cc8e64b48d34e4e5d6f0fa",
+    "src/services/gihani-session.ts": "9699a5ded0745cc4e3aca8125a1e13d5ae148f0ada4c68636085677aad233bd7",
+    "src/services/mood-reflections.ts": "a8b780ffab5b5ce8c762c13b20ab21373629c04fa2e242fa20cc9240663beeab",
+    "src/services/mood.ts": "569616ffa5f86bd2ca68f5d9adbd32ed991a223f99b6a85945f0615a6b739000",
+    "src/services/pre-session-notes.ts": "459378033183f8a0c6ba69de937b72b2ba16d833fdf18e8d0241aa7c61016b07",
+    "src/services/reminder-notifications.native.ts": "18156a28498339171025826444c31d1610e4d3922c0fbe27978b677276cee3dc",
+    "src/services/reminder-notifications.ts": "2c97aa17c88333a806117b1a271b1ce86eefc88ce28c5736370424155413424b",
+    "src/services/resources.ts": "f4d309681e5e862c600fb54a47e1e4dc04b562b52d6a71409868aea4e0e4f4dd",
+    "src/services/saved-resources.ts": "ad4a5012b8b2448448e9bbd97e902c26694b979d7b91cec6355108a483abcbcd",
+    "src/services/student-session.ts": "a4e009708d874084abb8b8e1c3704659b52482638f1041894ecca108ca720f50",
+    "src/services/user-profile.ts": "6d838e1b56648f40b03e7765af51b47b7b700f2f6edd219f198d5b0607bab5fd",
+    "src/utils/appointment-reminder-plan.ts": "f74327615d95f7793c8c0c5e5d7f45d5a380be68841aee3c95200e3a55c0285b",
+    "src/utils/auth.ts": "e9060856b5885255dfcb51f57a8017491bf1efe28fd1f51da7898929c6cfed82",
+    "src/utils/availability-form.ts": "9851324bb455f7d18fa7823eab3866dad8c0f88f078bb1a55066fd3019a42af1",
+    "src/utils/crisis-cues.ts": "eccb78528c4362333aea49c4a97f2a33a611a274ef44f7191d89e7c0635216be",
+    "src/utils/mood-rhythm.ts": "c4c5cf4a0f9bd8f52bf80230f8b54dc8d0b732dad923cd3b62f7e8579aa02df4",
+    "src/utils/resource-search.ts": "f6a1cb5576d003b38abb9192347c85efa16c07e4c72d7edd7463341480960372",
+    "src/utils/saved-resource-errors.ts": "6b8640b6c3c8924bce32131225b2980464735712e30db94fb48a90411ae66888",
+    "tsconfig.json": "3d7c5e48bbbd9124f70e734ef762ff0f27a6d492b2d2374537e46f6dc9772524"
+  },
+  "original_sha256": {
+    "src/app/index.tsx": "fbd3aebcebe73f009c0ee17ea5025a6f3f080c619dd68025c244f153b027e19f",
+    "src/app/login.tsx": "953d5fa1df2f92321cbd1a0639bd2a0a0cf6e1cc56659b8eda4323ca6b67beac",
+    "src/app/register.tsx": "b14432ed18e20fb8048cd4e5e9a57062ac3f85d17a188027ac30f8c68adb0228",
+    "src/app/_layout.tsx": "70062f47f9a5e0a4a06dae83016aa7bded168fcc08e4232de5ad3b3e2eb6b984",
+    "src/components/anonymous-exit-button.tsx": "b1ad64311ccfc61e3f82060e21551368426f75d85925a09177bf98f9aa91d70e",
+    "src/components/app-card.tsx": "267539d5c3710f0c77f9498079a40d53f5994af1a992420a44e4acc705ccbac8",
+    "src/components/app-text-input.tsx": "0eeb340669ffe75163f03ad33d9ee3cc5e2a7005e8e9b584c3a894172ac2db8d",
+    "src/components/appointment-reminder-banner.tsx": "cf82c7a7db08077f42ada529b566bf2dc831001c291acf03f40aacf077742e99",
+    "src/components/appointment-reminder-provider.tsx": "7e92cfecb9c84379f6cf1e03fd897c0fd393976c7f69aa1ed7362818d26e9fa4",
+    "src/components/appointment-screens.tsx": "26acdfaf012ec892c962cc53c1c86deaf259963a4e7fa1ae265b80f509e7afae",
+    "src/components/appointment-ui.tsx": "f27c79a3499bdb7727d9c1a29654e7a2a988cba4f7fa9a99fd836ed03c0cfccf",
+    "src/components/auth-screen.tsx": "947e55e460a3276b93b4a6535bff0add48cceff4d59594646727aaaeb8c230df",
+    "src/components/booking-draft.tsx": "a6dfc2a305d0f71a59dfc3fdd55a88f61aeff14ad3490995abfe4de2748d7f8f",
+    "src/components/care-icon.tsx": "3dd60098dd8e9b9c4b2b1cbdca489babf4b0dbf5491b27d5dd671774574c8757",
+    "src/components/care-login-layout.tsx": "1d272283c85ba33ba71fb24ea4374e535384c3b042054fb36dc8faf06156b8b7",
+    "src/components/chat-ui.tsx": "fb90df674055e6f81a480590c34d036ecfe16bc2574b361706980bbcb0c2ccf3",
+    "src/components/counselor-management-screens.tsx": "e07f74f298543cabd70524b54b570e9aaa2484fe1ef86fd139f689c31fa40303",
+    "src/components/counselor-ui.tsx": "88bf7f9100a20242a1a1a516e68e1826099d3038f46712c654da88e3412836a2",
+    "src/components/crisis-support-content.tsx": "1232987e476f8422ba8744fdebb6b781056d3b2bfbead79ba6d2f44a855d37ea",
+    "src/components/gihani-ui.tsx": "e02c71f41c4855494f840d71eeeeebfa1d79d41af7c3fc3e3941e993c5cdbdde",
+    "src/components/live-chat-screen.tsx": "ff3588d4ba9c5ddd374365870d18f4951145775f787358d2216c576553e8d41b",
+    "src/components/logout-button.tsx": "b50d0eda2c88d21818d9cb2501b6aa49c49ee4896923ff9e153212968b73dabe",
+    "src/components/mood-form.tsx": "64cc66bd48f428413a514cb0b833eb11337e3ad289193d3137411f0001a1c1cc",
+    "src/components/mood-option-card.tsx": "6e38d223dfbd13b9b0574182ebecefe079d6fda8463758548b001eb7431a69b7",
+    "src/components/mood-reflection-panel.tsx": "fe3aa70ea9b123d09bb4c8d6ffa9cb2b991dce26046b7ac2a99ed5f71148b4d3",
+    "src/components/notification-preferences.tsx": "afe03ab51526c722d0bcdff52585fc4cb8e1f3396ca74152ddd966cfb8fa99f1",
+    "src/components/presentation.tsx": "03649263615ccbd3aa39fd428959613a392b620053c022272f5d53b63bbff2f5",
+    "src/components/primary-button.tsx": "5955f1f88360399140468793e0b139a25a6b26bec425bb62e153a01ab51e37c6",
+    "src/components/resource-screens.tsx": "2b7c8f4c405523d53381c4ac2a5be936047ba0d0dcd71373022d8c701ce9dcd2",
+    "src/components/role-layout.tsx": "5af5fa7eaa6c4920b871734905a8c4d962ebffb23a7121acd766c86c78d11942",
+    "src/components/screen-container.tsx": "ad0b2d8c6cd2bf986f20858adc2395a9e4ebfaf0f93e3aef3b95127357429b7f",
+    "src/components/student-live-support.tsx": "ccb638132204f2440952c49b28b5bc2bb28944d9edfea72dd6bcc2edaab730d3",
+    "src/components/student-screen.tsx": "56126bf1c0838cb253f830c15f04e2f94b86702ca0f297b99c2e2c8676652514",
+    "src/components/student-ui.tsx": "240ac78b2b81c8861c04bf25520e8e667f6492e4b5876072b50c9e1d8b0ff2db",
+    "src/components/text.tsx": "6a33b1aafa61f95abbbfbf146c18dd61d7b9dc9a4250476c339938d74061edf3",
+    "src/components/wellness-ui.tsx": "b806d6fea2aab4071746fa1ace99c47a030bb20b7c4ce9b157d5c73f478142e2",
+    "src/config/auth-instance.native.ts": "04f63a41d30b42ed30f8daf7517dfbdce05917392c6cf2a7bc55efa1ce132afe",
+    "src/config/auth-instance.ts": "eee5d85bedeb1012404faee8692f39b0ae6861b260725e776f7a0b5ee1ade4ff",
+    "src/config/firebase.ts": "9f3b491fc13b7ad20976a9b1755aa7e674b9fbcdf8f07b330c0a35841fbb2bf9",
+    "src/constants/booking.ts": "cc61592b26d8f1815956a0b3d3a20c0a1052238ce9db1dc7b69f34cc7c4a6e95",
+    "src/constants/border-radius.ts": "2f8af4a9d13200491317bb540271ed974b8a602cea876e7237849554113f1aea",
+    "src/constants/care-layout.ts": "ef44ef75d66e0f1200cc6bcf5d4a81a1373a5f89df828d65fe760b26b824a69f",
+    "src/constants/colors.ts": "9fba60774df3663bfbc1e664585c562fc397624054153ef23583bb96af6debb2",
+    "src/constants/spacing.ts": "1717f62f176b3e6d8e46a089c09e69ad899147a95fd81fdbd3e2d740d96753de",
+    "src/constants/starter-resources.ts": "b273c5253df7fb902e07e95c50921078997fe5d7ac20a9252ea0829d18d33822",
+    "src/constants/student-support.ts": "8b24a1ada9aeba659a5c12b52002a3492c5ed5fd873cbd9a2ab70048c630b2e0",
+    "src/constants/typography.ts": "edb5b369609a6aa26109d5ce12a046f25c19e7f4b00bbb745f2c0f2ce9c46e00",
+    "src/hooks/use-counselor-schedule.ts": "3079af2bdac8fff6f1ef945b126f06e911d0bb112176e5b925cf61591d1d931a",
+    "src/hooks/use-counselor-threads.ts": "bced45cd030c0825d2aaa977149abaa7637326bb54077e72dde892030ec158c1",
+    "src/services/anonymous-chat.ts": "bad5e5a805625bb4bdfa3b17b7c39de72bb3d99781b4441d3a2f415989770a84",
+    "src/services/anonymous-mood.ts": "d1019c1d78e108ee5f408063b8895346ab0be63444b008cda36f9d4792b2309e",
+    "src/services/anonymous-session.ts": "6003b6a7c7bbbceb0c8fd8be110a91e3f6c398d2032afc9354185b092a37d69f",
+    "src/services/appointment-reminders.ts": "6c8657ca8282c91323803de4492bfe0ea4d735f5d25ec470e8cb5a70f5ef53d7",
+    "src/services/appointments.ts": "dc59d5748487b14d5a3521419db955880b3315f1d386b2112678b641558da2ef",
+    "src/services/auth.ts": "b4ede7b2a36d404e7edf8a5f0df28fe426c0cd1448d850b515dd51e966536763",
+    "src/services/chat.ts": "af56c50c87cdc73222662f35dec7106579f8d9e66bd2d098a8b7287d8191cf73",
+    "src/services/counselor-management.ts": "184f7324ba16f9e68a2d2136e0a63615db567e61f8cb7e6b4f67c7fde58d0132",
+    "src/services/gihani-session.ts": "9699a5ded0745cc4e3aca8125a1e13d5ae148f0ada4c68636085677aad233bd7",
+    "src/services/mood-reflections.ts": "a8b780ffab5b5ce8c762c13b20ab21373629c04fa2e242fa20cc9240663beeab",
+    "src/services/mood.ts": "569616ffa5f86bd2ca68f5d9adbd32ed991a223f99b6a85945f0615a6b739000",
+    "src/services/pre-session-notes.ts": "459378033183f8a0c6ba69de937b72b2ba16d833fdf18e8d0241aa7c61016b07",
+    "src/services/reminder-notifications.native.ts": "075d6a1eb26030db3764d262c36e24591f4912686d2252f2adee8589afed8350",
+    "src/services/reminder-notifications.ts": "80e8e7c6ef784514708c0f146686322ec0fc83f31a0c1ea54703d5b232c21f50",
+    "src/services/resources.ts": "f4d309681e5e862c600fb54a47e1e4dc04b562b52d6a71409868aea4e0e4f4dd",
+    "src/services/saved-resources.ts": "ad4a5012b8b2448448e9bbd97e902c26694b979d7b91cec6355108a483abcbcd",
+    "src/services/student-session.ts": "a4e009708d874084abb8b8e1c3704659b52482638f1041894ecca108ca720f50",
+    "src/services/user-profile.ts": "6d838e1b56648f40b03e7765af51b47b7b700f2f6edd219f198d5b0607bab5fd",
+    "src/utils/appointment-reminder-plan.ts": "4e47f55ea757bee3a4f1e9db2a74fc700cf488b60649257fa77c3fa61d70de36",
+    "src/utils/auth.ts": "e9060856b5885255dfcb51f57a8017491bf1efe28fd1f51da7898929c6cfed82",
+    "src/utils/crisis-cues.ts": "eccb78528c4362333aea49c4a97f2a33a611a274ef44f7191d89e7c0635216be",
+    "src/utils/resource-search.ts": "f6a1cb5576d003b38abb9192347c85efa16c07e4c72d7edd7463341480960372",
+    "src/utils/saved-resource-errors.ts": "6b8640b6c3c8924bce32131225b2980464735712e30db94fb48a90411ae66888",
+    "src/app/anonymous/chat.tsx": "d382341c095b3d3d715bd5573872d91d04c85dc0239ced4edf1768aa15f663a4",
+    "src/app/anonymous/crisis-support.tsx": "fc1c87664f274815e8477a9c1b90f088316b0bad79671fcffc44356ae57748c5",
+    "src/app/anonymous/home.tsx": "2bee46098e7ca6b43e0e41290cfdc214be9b34adacd84251a5d91a76daf1bbca",
+    "src/app/anonymous/mood.tsx": "6a82bd2e0dcdcfe06b3bc57bbfdb707d35218c4901c69b0e0f801b4a7376ffff",
+    "src/app/anonymous/_layout.tsx": "91037e49e0434b86f5bcce26ca7a4b258741d75839bbf87dc37e47f0788f9ce7",
+    "src/app/counselor/availability.tsx": "1776fa73b25867a40f0a6a9c5ff61da68d0686b90bacd2081eff6926f099d9b8",
+    "src/app/counselor/chats.tsx": "922510b6053a9b339355f36cd6452fb2f04b9f2b64f2600a74820204af8a2f6d",
+    "src/app/counselor/crisis-support.tsx": "95c45e06a755595bab3c880a6f2ff5c6eb28a4dc92862b9d55a9fd96caf4c086",
+    "src/app/counselor/dashboard.tsx": "1a8f1cc76bf3b8109da7b8e05ce3e37f0ed8cacc69f4312c119fa1c0c034a6e1",
+    "src/app/counselor/profile.tsx": "e2d4fd6c4538373a41f458cd0da99f5c5380736959ecec810a117b57db9eade8",
+    "src/app/counselor/schedule.tsx": "3a67f0c36e9c095f37c9033d7405fbe7d1f5e1108c62a113fb1baaae2775c4e5",
+    "src/app/counselor/sessions.tsx": "f4fed017f2134eba3f41507fbc6a1efa7e4a421f7af09e1c05e858a3d97c03f4",
+    "src/app/counselor/support.tsx": "1ee6b1b935f4aa274a16300f35f3fcdb105a2648face98d8c61e84269b59e1dd",
+    "src/app/counselor/_layout.tsx": "2c6f8f45492a1e7eb9036b9f891dbe6872cc3fa852b23e54d426b8177f111e3b",
+    "src/app/student/chat.tsx": "ae395db8ee64eda3bb0662a4755d3db0741d81ef0c6af203835c20b093c8bd8e",
+    "src/app/student/crisis-support.tsx": "777ca1b0b68170bcbd4a06904bea38468dd3067b7f9db82a7209c6b761a558be",
+    "src/app/student/home.tsx": "5a221a3ef596dd4d068d1367a01e78a062078d39263d735c60db67cff1889278",
+    "src/app/student/privacy.tsx": "23814cc6e8e5f5834438d1c783686e549bebb1c3cc0123c7c351b09346272ef7",
+    "src/app/student/profile.tsx": "f93dfd1dde34d9557b0262afa9572ff38ab47a32930fa26f362a849e1737a51e",
+    "src/app/student/resources.tsx": "25fb809763c60f4f1b99e70a57c72a459ead2c54608d4a45fb4ef86ce8797099",
+    "src/app/student/support.tsx": "4312b4989e03d5622757adef3b95ffb4d1a3da76f3d63407a3a7b0115f73401e",
+    "src/app/student/_layout.tsx": "40d87e56593367b6f62f4c673c03b19652fd561c37b3fdaab93d9c7449d4692e",
+    "src/app/student/(booking)/appointments.tsx": "c9c4e6aa43e8b7384e1d735db80a0ea2a8deb2503b4d8c4898f4ff7e2b0e1f72",
+    "src/app/student/(booking)/_layout.tsx": "6dd378b625f05cfadf9588590d912361ff7cce43b7092275bb2abe3855b030c7",
+    "src/app/student/mood/history.tsx": "77192cd3420c0fd4d3c81154418ceefd910c465c45aa39d88c007064a5827859",
+    "src/app/student/mood/index.tsx": "23e4a7a8e8e282c11c0086c2765cec3fcaaff1fdee6f8d51a64cb5517b9ac380",
+    "src/app/student/resources/saved.tsx": "10ee20316dee3d2949c837e2f9264bcda89b914d02c69175effd8e36d456719c",
+    "src/app/student/resources/[id].tsx": "01de80a026569e09a64f5b1d5a6e0a0a38ee869622f5d6db17f1b2212f7bcaac",
+    "src/app/student/mood/edit/[id].tsx": "8f2f9d95b700c869535e8057b66ab3073424bb11161acbb8789e6da58244d398",
+    "src/app/student/(booking)/appointments/book.tsx": "2506da9386c76e12ba9170ffa061078048a40b0395498137c9f01d76ea9b5b08",
+    "src/app/student/(booking)/appointments/confirm.tsx": "74ad51017e8c45896401c2d8372f8d39ad0630ed34a761d6205cdfaf818d6b5f",
+    "src/app/student/(booking)/appointments/pre-session.tsx": "28006160e3217b3f4d49d573ce240a4e2c37ad0e699ad1d87ad9b514e5ad84d7",
+    "src/app/student/(booking)/appointments/success.tsx": "8010e27871dca974a2316450f353f9d13c5d4c2d35946556c84101408d940e54",
+    "src/app/student/(booking)/appointments/edit/[id].tsx": "893ef3cb425c54bdbe8ddf285011e26a0f2ad27f39e384222d3b0cc7a8f29b9a",
+    "src/app/counselor/availability/new.tsx": "10e773aabb947d91c4cf839c2ed78e564884f4fb8088514fd4ed3649e1c6a0af",
+    "src/app/counselor/chat/[threadId].tsx": "03077bd3829f83fa470a410e27e1a322943e54bbfca4ff458a8fa175eeb8019e",
+    "src/app/counselor/session/[id].tsx": "d5937fe1bf92dfd934196eadf6537fbf63eb78d33b56d9bf50b10f8e29d656ef",
+    "src/app/counselor/availability/edit/[id].tsx": "c2f51e066b36750b52e4f76f1c4d9fec8e14da7653900c980f3217616c0f970b",
+    "src/app/anonymous/mood/history.tsx": "0c858147b450622104a5d6969e2f53b643629f1522bf3fc3fef7961cda2e6e9d",
+    "src/app/anonymous/mood/edit/[id].tsx": "9864b9e12f6f7fdc6c5ab1cc93b85e3f176fd84fd887f10977cb63758169be16",
+    "assets/expo.icon/icon.json": "747c56e178222a6255c6dd61c5de011b286cdc935febe89f04d1b191c3d076fe",
+    "assets/images/android-icon-background.png": "fb139c2dee362ebf2070e23b96da6fc0d43f8492de38b8af1fd7223e19b5861d",
+    "assets/images/android-icon-foreground.png": "9e3d0315a33c6799de601dd34cd8bf8cc3a8d16f3bf75592baec2ceb7240b391",
+    "assets/images/android-icon-monochrome.png": "6371fc2c12e33ad2215a86c281db3d682a81bebe7c957a842c13b8bf00cceb83",
+    "assets/images/expo-badge-white.png": "d9ba28c5e93aea3c2dabd901ee96fea3bb296ad8e648f6f64706dae11a1a62bd",
+    "assets/images/expo-badge.png": "ff353c7efadbd379903923cb604fca11c908cba0d4658cc2bd1f147d98317249",
+    "assets/images/expo-logo.png": "27b060a757a29038c9618586baa0ba3894dbe60d084c6059df497ff429c2d92f",
+    "assets/images/favicon.png": "a4e030697a7571b3e95d31860e4da55d2f98e5e861e2b55e414f45a8556828ba",
+    "assets/images/icon.png": "7a667804bb80a6a424a5daf18a2599c4f32237cf06fe78fc0de45dbb09e0eccf",
+    "assets/images/logo-glow.png": "bbd98a3f3c12d090f4df6065b7462fcdf6bc266209d002b4ef5fe554c245f66c",
+    "assets/images/react-logo.png": "224b7636b15e672801579b5b418077cbc2ca42f0146389062364356b0ecb5c5c",
+    "assets/images/react-logo@2x.png": "fa600be9ad2f869c7a8dbaffc78bb15af741123e1319c948f0be51753a153cde",
+    "assets/images/react-logo@3x.png": "cd84e02a5d542a3e71b7fa10a685c1b9fb51db4aff92aca6c0da6461ce17be16",
+    "assets/images/splash-icon.png": "27b060a757a29038c9618586baa0ba3894dbe60d084c6059df497ff429c2d92f",
+    "assets/images/tutorial-web.png": "e372ec23ad6262e2e0dc2799ce416b495a631a565bcd24f0615d4afc04dac3bd",
+    "assets/images/tabIcons/explore.png": "e2dea1c2d20929d83e8eebd74818e808b1b72e376d3a1f3a03679fff0255d073",
+    "assets/images/tabIcons/explore@2x.png": "1b54913b3a0acc3e1fb72d3b9b79ad04814304b35bbb9d03a533e6130ad6c26a",
+    "assets/images/tabIcons/explore@3x.png": "2f3e43801df70ebe83273b90a7d170bacf5ca74a8a8dc5c154a020c2c8b06609",
+    "assets/images/tabIcons/home.png": "3829632ec7d495225395f5da3d0942935d7d055979b174613d1ade82fe420e76",
+    "assets/images/tabIcons/home@2x.png": "21c5a07df9017d97464a0a8256e265288f2fca0741ca651de05e12b32f32f5ab",
+    "assets/images/tabIcons/home@3x.png": "fe5b397975e7cb70ae7a122472d174ed12ec2ae106f7b49c968225ad37f8b3b8",
+    "assets/expo.icon/Assets/expo-symbol 2.svg": "ad117d20fd819f4ec71876ce09c0e8b9275b1f20c5ec3c9d7d1914977ceffec6",
+    "assets/expo.icon/Assets/grid.png": "8247d79a2b31328fe4e330a973e6fae16924ed9aebd72c64d464d6856ab18c72",
+    "docs/anonymous-mode.md": "2ae6a6bc36a42ffe121c85970e0eec94de3cd50ac014c02b6a20d6d3af624db3",
+    "docs/appointment-reminders.md": "693bd83e337a4ef601cafb2e5b726778c39dd42fd4c21dbfad7f8eb21a4724e8",
+    "docs/azhmen-features.md": "460a6b2c265530cb70ee3a76841f8da4e603ff48f56f8c13043358ab7334cc5f",
+    "docs/counselor-dashboard.md": "b76851ef4b2046da0cc1607e97b6ab2731858d101ef92dafec2478797d1e0ff3",
+    "docs/counselor-profile.md": "c442ec527ccde009d7fa02331aea2fed5e7222e406f60b2d147e24071f526c17",
+    "docs/gihani-features.md": "945bd45fbfcb3f61333155bc9fb5b01179f13faa08ee047742eda44912d7f6ee",
+    "docs/kiyathan-features.md": "67bbb680694561d6517943631b7108337f052e2e42e69efa68b31aec3fd57dc6",
+    "docs/live-chat.md": "58086cbd17c7bcdda65ab8d93bb3a56e63edac8389100adfeca05acad6b4afbd",
+    "docs/mood-ownership.md": "eccc5e7301de9381d8708b76e537c4e3ae85f880710e80baff262589873c6e66",
+    "docs/registration.md": "2e9062ddad151e92456b5baaf25de42360033e481511ce6dfe503139dcd1dba4",
+    "docs/student-flow.md": "5d246136d0e874ec96948f0cf026d249b76f2dfe4095b2a3b0823666c94b9a65",
+    "docs/student-profile-support.md": "5b7aa608419fd3f3246b84db57f5662df2ea066a15a2150b60802e98bcabf050",
+    "docs/tharukanan-features.md": "75b69f28e10b77ae8990af9ed8f8b876cb87901f76155ab65f684e00db073030",
+    "docs/ui-consistency.md": "44a1c38258011ac90e4fd448926e52fe41834d24c6b920d181cf24d8c24b4428",
+    "scripts/audit-visual-preservation.cjs": "47bcb35d57b9ec0d27d106e17e68abac2a9640c47d78bd5cdeb84f37595faf25",
+    "scripts/render-student-previews.cjs": "5d5835054db3065ca4b87a6a7ffbb4ac64641ce25d2874f25072dd4174e145ac",
+    "scripts/run-rule-regressions.cjs": "6ad7c16d487f3e0587ee9f5ba8301ce4eae564b9edff3d868d6080bbfcf8b1cd",
+    "scripts/test-appointment-rules.cjs": "499099f1852d68dd6dd0dcccfad210a6a06cebceb9f739306054bdd7710d1879",
+    "scripts/test-appointments.cjs": "07604f203065bf8723bd4e0c6fbe076d9c7e1b0dda75b48dfa4797aa625f5806",
+    "scripts/test-counselor-profile-rules.cjs": "0335111decfd3b62e8f7257ee2388898128963d0dbc2c6a6c63d39f55cf8e88e",
+    "scripts/test-counselor-profile-screen.cjs": "82a55b5496e7d32392fac85d69e6a2cc52027011eea44d11f4097c38883eab5a",
+    "scripts/test-counselor-profile.cjs": "fceee4280d827483bc4d9544062ef86f193965d4fe202d17081ff48e617182f2",
+    "scripts/test-firestore-rules.cjs": "90a86f54a4a88d2e8cfb30b964725c9ee774c63f330c913e8e5ae1d22c3774e2",
+    "scripts/test-gihani-rules.cjs": "1b1b9d09b09dff33e0f007082f80d543cbe7db6fbdca6e9dfa52dcd8f4c91606",
+    "scripts/test-gihani-services.cjs": "30dd4201195a8c1f43c3fc881ade638a7b7491d090cb8e826bc635b407a9503d",
+    "scripts/test-kiyathan-rules.cjs": "8bc8c3bce6dd635b3119dd223c65a2be9467f2b18a5bf5dd0e25b4fa4b6f14cc",
+    "scripts/test-kiyathan-services.cjs": "bd5e574f72a7b4d3f4d890e3764889be969a6a8633f12660ae7bd4ae92c215c2",
+    "scripts/test-notification-preference-rules.cjs": "ec785e25bf819960818dfad5e3d1531e28722a47aec794b3f8332e8a89ed91fc",
+    "scripts/test-registration-flow.cjs": "4d73058a04b787f5745c2d6c8784c28289cba2015baf79c22ea621d21763b7d9",
+    "scripts/test-registration-rules.cjs": "86d185c62a3c0883f3960558abbd9cca0844717c342ce6ae305adf536650d983",
+    "scripts/test-reminder-crisis-ui.cjs": "26ea72a4c465b075fabaa1ed5d610177edf46a166e4a516a09d2282cd469ca45",
+    "scripts/test-reminders-and-crisis.cjs": "1defa3b80d22de8be6f19e4d4490fc92b8c429687d1c9983f212f0ef1107dfb4",
+    "scripts/test-saved-resource-flow.cjs": "54791eea61dbaeec07d297c86321a6858cb7f979cfee679c189ba7e7d3ca814e",
+    "scripts/test-student-profile-screen.cjs": "811d28fb8da6a5fd18e0dcd61e94fb9459119f77db7d453c37c08aaf58bf6877",
+    "scripts/test-student-profile-support.cjs": "f49e8f440ffb80a61d394a06c123a8cd6a272d08b9e3c88a271001bf7945c519",
+    "scripts/test-student-services.cjs": "07479792a2f57239f35ed7f4e34922c4ec5c6ca33b9cb8d06131dbc20985ae41",
+    ".env": "a5f48c1a39e2b003c96abd74e0cfbe0b89f977f99b43fa464d3f8523dd6f5303",
+    ".gitignore": "b6c59414ae0ad4c18be4660b04982d131f59bb519d1a35edfe93be5ad6f5a32e",
+    "AGENTS.md": "4fd0da1e1b5dffc73e4e1cec02b9063a271a94b9995c362b9012ca7b57f50c62",
+    "app.json": "20905fb74953f9890be7dc47900467741aa1932d3170098c5cf2d59f550b746b",
+    "eslint.config.js": "6ea734f0e3f5b7c3c5720b3c467695516b14935724a78386b8534abc2959da12",
+    "expo-env.d.ts": "6fc02634da46d3edc5a88eec9173ba6bf709726be3cba83c73ebd8e859d5c147",
+    "firebase-debug.log": "7d1da30deeade95fdb689b47beeb3994ca87ab51ef576303d14413d6d19cf1e7",
+    "firebase.emulator.json": "881c7e1be7fdf731cc36983cefa847d2d53b9e1a3c01c15043d236adb9f0bb52",
+    "firestore.rules": "024227308d58e6d8066176b72d78082ae7369d7a139235a50e6dfe821e166ef1",
+    "LICENSE": "fb3ca4a837f5779e83cef89b78253a8949cfb9429c340309f62d0465ec6610b4",
+    "package-lock.json": "4111d37b4eacabc6716b88e5a2fbe5b6466184aa0391646b5b5b0afec36effcb",
+    "package.json": "0717ae4fbc2565dac5e54e5706d5e3e167fae8b587e90917e6d89efa77af385d",
+    "README.md": "74b618a1f50d84732c72cc92a49cdebafc3e40d54d9ba63523d80955abafc379",
+    "tsconfig.json": "2c427a7bc50569dc5167d39425793d8bba22eeffcb213fff05f6274980784508"
+  },
+  "branch_plan": [
+    "main",
+    "member/azhmen",
+    "member/tharukanan",
+    "member/gihani",
+    "member/kiyathan"
+  ],
+  "existing_branches": [
+    "main 2f236e1"
+  ],
+  "remote_configuration": [],
+  "generated_shared_not_for_staging": [
+    "expo-env.d.ts"
+  ],
+  "excluded_local": [
+    ".env",
+    ".env.* (except .env.example)",
+    "node_modules/",
+    ".expo/",
+    "dist/",
+    "tmp/",
+    "artifacts/",
+    "coverage/",
+    "logs",
+    "service-account credentials"
+  ],
+  "conflicts_resolved": [
+    "Regression/preview scripts belong only to Shared/Common.",
+    "Legacy first-upload folder is now a complete integration snapshot, not Azhmen exclusive ownership.",
+    "Mixed dashboard/profile/layout/profile-service/booking-utility files belong on main.",
+    "New reliability, reminder and picker files assigned by implementation/imports."
+  ],
+  "folder_refresh": {
+    "source": "Current working project files",
+    "git_actions_performed": false,
+    "azhmen_contents": "Azhmen + Shared/Common + Integration only; other members arrive as overlays",
+    "all_copied_sha256_verified": true,
+    "important_files_verified": {
+      "src/components/live-chat-screen.tsx": "01-Azhmen-first-upload",
+      "src/components/appointment-screens.tsx": "Tharukanan",
+      "src/components/resource-screens.tsx": "Gihani",
+      "src/components/counselor-management-screens.tsx": "Kiyathan",
+      "src/components/mood-reflection-panel.tsx": "Gihani",
+      "src/components/mood-log-card.tsx": "Gihani",
+      "src/app/student/mood/history.tsx": "Gihani"
+    },
+    "counts": {
+      "01-Azhmen-first-upload": 155,
+      "Tharukanan": 20,
+      "Gihani": 16,
+      "Kiyathan": 16
+    }
+  }
+}
