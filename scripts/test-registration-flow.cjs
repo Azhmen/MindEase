@@ -67,7 +67,12 @@ async function test() {
     assert.equal(saved.name, 'New ' + role); assert.equal(saved.role, role); assert.equal(saved.email, role + '@example.test');
     assert.equal(saved.appointmentRemindersEnabled, false); assert.ok(saved.createdAt);
     assert.deepEqual(Object.keys(saved).sort(), ['uid', 'name', 'email', 'role', 'createdAt', 'appointmentRemindersEnabled'].sort());
-    assert.ok(!rows.has('counselor_directory/' + saved.uid), 'Directory remains admin-managed');
+    if (role === 'counselor') {
+      const directory = rows.get('counselor_directory/' + saved.uid);
+      assert.equal(directory.name, saved.name); assert.equal(directory.active, true);
+      assert.equal(directory.bookingAvailable, true); assert.equal(directory.chatAvailable, true);
+      assert.ok(!('email' in directory));
+    } else assert.ok(!rows.has('counselor_directory/' + saved.uid), 'Students never create directory entries');
     await firebaseAuth.signOut(); slots = []; tree = render(Login);
     find(tree, n => n.props?.label === 'Email or ID').props.onChangeText(saved.email);
     find(tree, n => n.props?.label === 'Password').props.onChangeText('secure123');

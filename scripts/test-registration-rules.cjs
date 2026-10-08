@@ -16,6 +16,16 @@ async function test() {
       await assertFails(updateDoc(doc(db, 'users', uid), { role: role === 'student' ? 'counselor' : 'student', updatedAt: serverTimestamp() }));
       await assertFails(setDoc(doc(db, 'counselor_directory', uid), { name: 'New User', active: true }));
       await assertFails(setDoc(doc(db, 'counselor_directory', uid), { name: 'New User', active: false }));
+      const directory = { name: 'New User', title: '', specialization: '', active: true, bookingAvailable: true, chatAvailable: true, updatedAt: serverTimestamp() };
+      await assertFails(setDoc(doc(db, 'counselor_directory', 'other'), directory));
+      if (role === 'student') await assertFails(setDoc(doc(db, 'counselor_directory', uid), directory));
+      else {
+        await assertFails(setDoc(doc(db, 'counselor_directory', uid), { ...directory, email }));
+        await assertFails(setDoc(doc(db, 'counselor_directory', uid), { ...directory, name: 'Forged profile' }));
+        await assertSucceeds(setDoc(doc(db, 'counselor_directory', uid), directory));
+        await assertFails(updateDoc(doc(db, 'counselor_directory', uid), { active: false }));
+        await assertFails(updateDoc(doc(db, 'counselor_directory', uid), { bookingAvailable: false }));
+      }
     }
     console.log('PASS: own registration profile/default reminders, protected identity, privileged fields/password/foreign UID rejection, admin-managed directory.');
   } finally { await env.cleanup(); }
