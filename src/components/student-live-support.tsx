@@ -7,7 +7,7 @@ import { AppText } from '@/components/text';
 import { StudentScreen, StatusMessage } from '@/components/student-screen';
 import { CareButton, StudentCard, studentStyles } from '@/components/student-ui';
 import { LiveChatScreen } from '@/components/live-chat-screen';
-import { getActiveCounselors, type ChatThread, type Counselor } from '@/services/chat';
+import { getActiveCounselors, subscribeToActiveCounselors, type ChatThread, type Counselor } from '@/services/chat';
 import * as studentChat from '@/services/chat';
 import * as anonymousChat from '@/services/anonymous-chat';
 import { getAuthErrorMessage } from '@/utils/auth';
@@ -36,8 +36,12 @@ export function StudentLiveSupport({ anonymous = false }: { anonymous?: boolean 
       catch (err) { if (active) { setError(getAuthErrorMessage(err)); setLoading(false); } }
     }
     void listen();
-    getActiveCounselors().then(data => { if (active) setCounselors(data); }).catch(err => { if (active) setError(getAuthErrorMessage(err)); }).finally(() => { if (active) setDirectoryLoading(false); });
-    return () => { active = false; unsubscribe?.(); };
+    let stopDirectory: (() => void) | undefined;
+    void Promise.resolve().then(() => {
+      if (!active) return;
+      stopDirectory = subscribeToActiveCounselors(data => { if (active) { setCounselors(data); setDirectoryLoading(false); } }, err => { if (active) { setCounselors([]); setError(getAuthErrorMessage(err)); setDirectoryLoading(false); } });
+    }).catch(err => { if (active) { setError(getAuthErrorMessage(err)); setDirectoryLoading(false); } });
+    return () => { active = false; unsubscribe?.(); stopDirectory?.(); };
   }, [attempt, service]);
   async function start(counselorId?: string) {
     if (lock.current) return;
@@ -63,7 +67,7 @@ export function StudentLiveSupport({ anonymous = false }: { anonymous?: boolean 
       <CareButton title={starting ? 'Opening chat...' : 'Start Live Chat'} disabled={loading || directoryLoading || starting || !counselors.length} onPress={() => start()} />
     </StudentCard>
     {loading || directoryLoading || starting ? <ActivityIndicator color={Colors.careGreen} /> : null}<StatusMessage message={error} error />
-    {choosing ? <><AppText style={studentStyles.section}>Choose your counselor</AppText>{counselors.map(counselor => <StudentCard key={counselor.id}><AppText style={studentStyles.section}>{counselor.name}</AppText>{counselor.title ? <AppText style={studentStyles.muted}>{counselor.title}</AppText> : null}<CareButton title="Start Chat" disabled={starting} onPress={() => start(counselor.id)} /></StudentCard>)}</> : null}
+    {choosing ? <><AppText style={studentStyles.section}>Choose your counselor</AppText>{counselors.map(counselor => <StudentCard key={counselor.id}><AppText style={studentStyles.section}>{counselor.name}</AppText>{counselor.title ? <AppText style={studentStyles.muted}>{counselor.title}</AppText> : null}{counselor.specialization ? <AppText style={studentStyles.muted}>{counselor.specialization}</AppText> : null}<CareButton title="Start Chat" disabled={starting} onPress={() => start(counselor.id)} /></StudentCard>)}</> : null}
     <CareButton title="Refresh availability" secondary disabled={starting || loading || directoryLoading} onPress={() => { setError(''); setChoosing(false); setLoading(true); setDirectoryLoading(true); setAttempt(value => value + 1); }} />
     <StudentCard style={{ backgroundColor: Colors.careAlert, padding: 20 }}><AppText style={studentStyles.section}>Need immediate support?</AppText><AppText style={studentStyles.muted}>Live chat is not an emergency service. If you need urgent help, use trusted local or campus support.</AppText><CareButton title="Open Crisis Support" secondary onPress={() => router.push(anonymous ? '/anonymous/crisis-support' : '/student/crisis-support')} /></StudentCard>
   </StudentScreen>;
