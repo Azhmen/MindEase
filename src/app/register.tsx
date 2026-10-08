@@ -9,7 +9,7 @@ import { PrimaryButton } from '@/components/primary-button';
 import { AppText } from '@/components/text';
 import { RoleSelector, careLoginStyles } from '@/components/care-login-layout';
 import { registerUser } from '@/services/auth';
-import { createUserProfile, type UserRole } from '@/services/user-profile';
+import { createUserProfile, ensureCurrentCounselorDirectory, type UserRole } from '@/services/user-profile';
 import { getAuthErrorMessage, getRoleRoute, isValidEmail } from '@/utils/auth';
 
 export default function RegisterRoute() {
@@ -45,6 +45,7 @@ export default function RegisterRoute() {
         setCreatedUser(user);
       }
       await createUserProfile({ uid: user.uid, name: name.trim(), email: user.email ?? email.trim(), role });
+      if (role === 'counselor') await ensureCurrentCounselorDirectory();
       router.replace(getRoleRoute(role));
     } catch (error) {
       const message = getAuthErrorMessage(error);
@@ -65,7 +66,7 @@ export default function RegisterRoute() {
         <AppText variant="caption" style={careLoginStyles.muted}>Use at least 6 characters.</AppText>
         <AppTextInput label="Confirm Password" value={confirmPassword} onChangeText={setConfirmPassword} secureTextEntry autoCapitalize="none" autoCorrect={false} autoComplete="new-password" editable={editable} onSubmitEditing={handleRegister} />
         <RoleSelector role={role} disabled={!editable} onChange={setRole} />
-        {role === 'counselor' ? <AppText variant="caption" style={careLoginStyles.muted}>Your campus administrator must activate your counselor directory entry before students can select you for booking or live chat.</AppText> : null}
+        {role === 'counselor' ? <AppText variant="caption" style={careLoginStyles.muted}>Your counselor directory profile is created automatically. Publish availability so students can book a session.</AppText> : null}
         <AuthError message={error} />
         <PrimaryButton title={loading ? 'Creating account...' : createdUser ? 'Retry profile' : 'Create Account'} onPress={handleRegister} disabled={loading} />
       </AppCard>

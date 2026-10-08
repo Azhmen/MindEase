@@ -78,9 +78,19 @@ service cloud.firestore {
         && request.resource.data.updatedAt == request.time;
     }
 
-    // Directory contains display details only; console/Admin SDK manages membership.
+    // Directory contains public display details only; owners may provision once.
     match /counselor_directory/{counselorUid} {
       allow read: if signedIn();
+      // Auto-provision only the signed-in counselor's own missing directory.
+      // Existing activation/availability settings remain administrator-managed.
+      allow create: if counselorProfile() && request.auth.uid == counselorUid
+        && request.resource.data.keys().hasOnly(['name', 'title', 'specialization', 'active', 'bookingAvailable', 'chatAvailable', 'updatedAt'])
+        && request.resource.data.keys().hasAll(['name', 'title', 'specialization', 'active', 'bookingAvailable', 'chatAvailable', 'updatedAt'])
+        && publicCounselorProfile(request.resource.data)
+        && synchronizedCounselorProfile(counselorUid, get(/databases/$(database)/documents/users/$(counselorUid)).data)
+        && request.resource.data.active == true
+        && request.resource.data.bookingAvailable == true && request.resource.data.chatAvailable == true
+        && request.resource.data.updatedAt == request.time;
       // Membership, active, and any existing public admin fields are preserved.
       allow update: if counselorProfile() && request.auth.uid == counselorUid
         && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'title', 'specialization'])
@@ -113,8 +123,8 @@ service cloud.firestore {
         && request.resource.data.studentId == request.auth.uid
         && request.resource.data.counselorId is string
         && exists(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId))
-        && (!('active' in get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data)
-          || get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data.active == true)
+        && activeCounselor(request.resource.data.counselorId)
+        && get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data.get('chatAvailable', true) != false
         && get(/databases/$(database)/documents/users/$(request.resource.data.counselorId)).data.role == 'counselor'
         && request.resource.data.createdAt == request.time
         && request.resource.data.lastMessage == '' && request.resource.data.lastMessageAt == null;
@@ -181,8 +191,7 @@ service cloud.firestore {
     function activeCounselor(uid) {
       return uid is string
         && exists(/databases/$(database)/documents/counselor_directory/$(uid))
-        && (!('active' in get(/databases/$(database)/documents/counselor_directory/$(uid)).data)
-          || get(/databases/$(database)/documents/counselor_directory/$(uid)).data.active == true)
+        && get(/databases/$(database)/documents/counselor_directory/$(uid)).data.active == true
         && get(/databases/$(database)/documents/users/$(uid)).data.role == 'counselor';
     }
     match /anonymous_chat_threads/{sessionId} {
@@ -195,6 +204,7 @@ service cloud.firestore {
         && request.resource.data.sessionId == sessionId && sessionId.size() == 36
         && request.resource.data.anonymousUid == request.auth.uid
         && activeCounselor(request.resource.data.counselorId)
+        && get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data.get('chatAvailable', true) != false
         && request.resource.data.createdAt == request.time
         && request.resource.data.lastMessage == '' && request.resource.data.lastMessageAt == null;
       allow update: if anonymousParticipant(resource.data)
@@ -276,6 +286,7 @@ service cloud.firestore {
       allow list: if student() && resource.data.studentId == request.auth.uid;
       allow create: if student() && validAppointment(request.resource.data)
         && activeCounselor(request.resource.data.counselorId)
+        && get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data.get('bookingAvailable', true) != false
         && request.resource.data.counselorName == get(/databases/$(database)/documents/counselor_directory/$(request.resource.data.counselorId)).data.name
         && request.resource.data.status == 'booked'
         && request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time;
